@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+.Info__container {
+    /* Provisorio: */
+    min-height: 90vh;
+    font-family: sans-serif;
+    background: url("https://img.freepik.com/foto-gratis/viejo-fondo-textura-madera-vintage_55716-1138.jpg?size=626&ext=jpg") no-repeat;
+    background-size: cover;
+}
+
+.Info-table{
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.title-info{
+    background-color: aliceblue;
+    padding: 1rem 1rem;
+    font-family: 'Sacramento', sans-serif;
+    font-size: 40px;
+    transform: rotate(-3deg);
+}
+
+.description-info{
+    background-color: aliceblue;
+    padding: 0 2rem;
+    text-align: justify;
+}
+
+
+/* ***HEADER INFO*** */
+
+*{
+    list-style: none;
+    text-decoration: none;
+}
+
+.sidebar {
+    background: linear-gradient(90deg, rgb(34, 18, 61) 0%, rgb(50, 19, 99) 100%);
+    z-index: 1;
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    transition: all .5s ease;
+}
+
+.sidebar header {
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    line-height: 70px;
+    background: linear-gradient(90deg, rgb(43, 29, 94) 0%, rgb(48, 26, 128) 100%);
+    user-select: none;
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: #fff;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1) ;
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+
+.sidebar ul li:hover a{
+    padding-left: 50px;
+}
+
+.sidebar ul a i{
+    margin-right: 16px;
+}
+
+#check{
+    display: none;
+}
+
+label #btn-sidebar,label #cancel-sidebar,label {
+    background: #281358;
+    border-radius: 3px;
+    position: absolute;
+    cursor: pointer;
+}
+label #btn-sidebar{
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: #fff;
+    padding: 6px 12px;
+    transition: all .5s;
+}
+label #cancel-sidebar{
+    z-index: 10;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: #fff;
+    padding: 4px 9px;
+    transition: all .5s;
+}
+
+#check:checked ~ .sidebar {
+    left: 0;
+}
+#check:checked ~ label #btn-sidebar {
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel-sidebar {
+    left: 195px;
+}
+
+/* NAVEGACIÓN DE CONCEPTOS */
+
+.hidden-sidebar{
+    
+    display: none;
+}
+
+.show-sidebar {
+    background: linear-gradient(90deg, rgb(29, 68, 94) 0%, rgb(26, 99, 128) 100%);
+    font-style: italic;
+    display: block;
+}
+.sidebar ul li ul li:hover{
+    background: linear-gradient(90deg, rgb(49, 110, 151) 0%, rgb(33, 126, 163) 100%);
+}
