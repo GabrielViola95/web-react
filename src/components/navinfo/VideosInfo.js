@@ -23,6 +23,10 @@ const VideosInfo = () => {
             <p className='description-info'><i class="fa-brands fa-youtube"></i> Video 4</p>
             <p className='description-info'><i class="fa-brands fa-youtube"></i> Video 5</p>
             <p className='description-info'><i class="fa-brands fa-youtube"></i> Video 6</p>
+
+            <p className='description-info'>
+                Hasta acá los <span className='mark-bold'>Videos</span> que te recomendamos, espero te haya resultado interesante. <i class="fa-solid fa-thumbs-up"></i>
+            </p>
         </div>
   )
 }

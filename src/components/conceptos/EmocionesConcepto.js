@@ -1,19 +1,29 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import organismoEmociones from '../../assets/emociones/organismoEmociones.png';
+import seisEmociones from '../../assets/emociones/seisEmociones.png';
+import sistemaLimbico from '../../assets/emociones/sistemaLimbico.png';
 
 const EmocionesConcepto = () => {
   return (
     <div className="Info-table">
             <h2 className='title-info'>¿Qué son las Emociones?</h2>
-            <p className='description-info'>La <span className='mark-bold'>Psicoterapia Cognitiva Posracionalista</span>  es un tipo de terapia desarrollada en los años 90 por el neuropsiquiatra italiano <span className='mark-bold'>Vittorio Guidano</span>. Se enmarca dentro de una perspectiva constructivista, que entiende que la realidad la vamos construyendo de forma única y personal.
+            <p className='description-info'>Las <span className='mark-bold'>Emociones</span> son un hecho empírico, tanto para nuestra experiencia como para la ciencia. Las emociones nos movilizan y nos informan, <span className='mark-bold'>constituyen la base de nuestra experiencia y de nuestro significado personal</span>. En general, se caracterizan por una activación fisiológica, una reacción motora-conductual y una experiencia consciente. No tengas dudas de que conocer e identificar las emociones puede ayudarte a volverte más adaptativo y aumentar tu bienestar personal.
             </p>
-            <p className='description-info'>Así, habría tantas realidades como personas. Esta terapia, además, le da mucha importancia a la<span className='mark-bold'> identidad personal y al lenguaje</span>. En este artículo conoceremos sus características generales, así como las ideas de Guidano y algunas de las técnicas que utiliza a través de su modelo.</p>
-            <p className='description-info'>La Psicoterapia Cognitiva Posracionalista fue creada por Vittorio Guidano a lo largo de toda su vida; aproximadamente, desde los años 70 hasta el año 1994. Se considera un tipo de terapia cognitiva pero también constructivista, en la cual la relación terapéutica se entiende como “de experto a experto”. Su objetivo principal es que la persona sea capaz de construir una identidad propia a través de diferentes estrategias que veremos a continuación.</p>
+            <img src={sistemaLimbico} alt='Sistema Limbico' />
+
+            <p className='description-info'>Según el catedrático <span className='mark-bold'>Paul Ekman</span> existen 6 emociones básicas universales que tenemos todos los homo psicologicus y compartimos con otras especies. En estas imágenes se encuentran todas las propuestas por este gran investigador. Quiero que intentes reconocerlas a todas… Si queres podes ver atentamente la imágen y cuando creas haberlas identificado a todas leer la parte de abajo. </p>
+
+            <img src={seisEmociones} alt='Emociones Básicas Ekman' />
+
+            <p className='description-info'>En fin, ahí vamos: la primera es <span className='mark-bold'>IRA</span>, la segunda, <span className='mark-bold'>MIEDO</span>, la tercera, <span className='mark-bold'>ASCO</span>, la cuarta, <span className='mark-bold'>SORPRESA</span>, la quinta, <span className='mark-bold'>ALEGRÍA</span> y la última, <span className='mark-bold'>TRISTEZA</span>.</p>
             <p className='description-info'>
-            Este tipo de terapia se utiliza como intervención clínica psicológica, y a su vez constituye una escuela teórica en psicología. Esta escuela sigue un modelo teórico que defiende que el ser humano intenta crear cierta continuidad en el sentido de sí mismo y de su historia personal, a través de una identidad narrativa coherente y flexible. Dicha identidad se puede ver reflejada en elaboraciones narrativas que desarrolla el paciente. 
+            Según las investigaciones de Ekman, en todas las culturas podemos encontrar estas 6 emociones básicas. Pero también existen otras emociones que si pueden variar y se encuentran ya más influidas por la cultura, son aprendidas y adquiridas: por eso son conocidas como <span className='mark-bold'>Emociones Secundarias</span>. Según esta posición, algunos ejemplos serían <span className='mark-bold'> verguenza, culpa, orgullo, entusiasmo, satisfacción, desprecio, complacencia, placer</span>...
             </p>
-            <p className='description-info'>¿Ya lo conoces? Te presento a <span className='mark-bold'><Link to="/">Guidano</Link></span>:</p>
-            <img src="https://pymstatic.com/45655/conversions/vittorio-guidano-default.jpg" alt='Vittorio Guidano Perfil Retrato' />
+            <img src={organismoEmociones} alt='Organismo Emociones Localización' />
+
+            <p className='description-info'>
+                Hasta acá nuestro resumen de las <span className='mark-bold'>Emociones</span>, espero te haya resultado interesante. <i class="fa-solid fa-thumbs-up"></i>
+            </p>
         </div>
   )
 }

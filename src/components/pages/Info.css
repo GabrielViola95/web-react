@@ -19,6 +19,12 @@
     font-size: 40px;
     transform: rotate(-3deg);
 }
+.title-info-osp{
+    padding: 9rem 2rem 1rem;
+    font-family: 'Sacramento', sans-serif;
+    font-size: 40px;
+    transform: rotate(-3deg);
+}
 
 .description-info{
     padding: .5rem 2rem;
@@ -56,6 +62,11 @@
     }
     .title-info{
         padding: 7rem 2rem 1rem;
+        font-size: 80px;
+    }
+
+    .title-info-osp{
+        padding: 10rem 2rem 1rem;
         font-size: 80px;
     }
     
@@ -218,12 +229,24 @@ label #cancel-sidebar{
     cursor: pointer;
 }
 
+.space-between {
+    margin-left: 4rem;
+}
+
+.fa-thumbs-up{
+    color: #281358;
+}
+
+
 /* QUERIS */
 
 @media screen and (max-width: 1025px) {
     .title-info-others{
         padding: 5rem 2rem 1rem;
         font-size: 25px;
+    }
+    .space-between {
+        margin-left: 1rem;
     }
 }
 
@@ -259,3 +282,6 @@ label #cancel-sidebar{
 .paginationActive{
     transform: scale(1.2);
 }
+
+
+
