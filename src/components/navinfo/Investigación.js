@@ -1,7 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import JsonResearches from '../../data/researches.json'
+import ReactPaginate from 'react-paginate';
 
 const Investigación = () => {
+   const [researches, setResearches] = useState(JsonResearches.slice(0, 9));
+   const [pageNumber, setPageNumber] = useState(0);
+
+   const researchesPerPage = 3;
+   const pagesVisited = pageNumber * researchesPerPage;
+   
+   const displayResearches = researches.slice(pagesVisited, pagesVisited + researchesPerPage).map((research) => {
+      return (
+         <>
+            <p className='description-info research'>
+               <span className='mark-bold'> <i className='fas fa-clipboard-check'></i> <a target="_blank" href={research.link}>{research.title}</a></span>
+            </p>
+            <p className='description-info'><span className='mark-bold'>Resumen:</span></p>
+            <p className='description-info'>{research.resume}</p>
+            <p className='description-info underline'><a href={research.link}>Ir al Link</a></p>
+         </>
+      )
+   })
+
+   const pageCount = Math.ceil(researches.length / researchesPerPage);
+
+   const changePage = ({selected}) => {
+      setPageNumber(selected)
+   };
+
   return (
     <div className="Info-table">
             <h2 className='title-info-others'>Investigaciónes & Estudios <i className="fas fa-dna"></i> </h2>
@@ -10,49 +37,25 @@ const Investigación = () => {
             <p className='description-info'>En este apartado te queremos dejar una serie de links para continuar profundizando y aprendiendo sobre el tema. El estudio de conceptos tales como <span className='mark-bold'> identidad personal, lenguaje, emociones </span> o cualquier otro en relación a los <span className='mark-bold'>Homo Psicologicus</span> no pueden ser estudiados de forma aislada y simple, sino en relación y teniendo en vista siempre la <span className='mark-bold underline'><a href="https://www.psi.uba.ar/academica/carrerasdegrado/psicologia/sitios_catedras/electivas/102_infanto_juvenil/material/complejidad_morin.pdf" target="_blank">Complejidad</a></span>.</p>
 
             {/* INVESTIGACIONES */}
-            <p className='description-info research'>
-            <span className='mark-bold'> <i className='fas fa-clipboard-check'></i> <a target="_blank" href="http://www.scielo.org.bo/scielo.php?script=sci_arttext&pid=S2077-21612019000200007">EL ABORDAJE CLÍNICO DE PERSONAS DIAGNOSTICADAS CON TRASTORNO LÍMITE DE LA PERSONALIDAD: UNA EXPLORACIÓN DE LAS ESCUELAS COGNITIVO-CONDUCTUAL, GESTALT, POSRACIONALISMO Y PSICOANÁLISIS</a></span>
-            </p>
-            <p className='description-info'><span className='mark-bold'>Resumen:</span></p>
-            <p className='description-info'>El diagnóstico del Trastorno Límite de la Personalidad ha ido en incremento en los últimos años, junto con ello, desde la psicología clínica se han diversificado, las formas de abordaje y tratamiento. La presente investigación tiene como objetivo analizar cómo entienden y abordan el Trastorno Límite de Personalidad psicólogos chilenos desde su respectiva formación y línea de abordaje desde las escuelas Cognitivo-Conductual, Gestalt, Psicoanálisis y Posracionalismo. Para esto se plantearon dos preguntas de investigación: ¿Cómo entienden el Trastorno Límite de la Personalidad los psicólogos de estas escuelas? Y ¿Cómo abordan el Trastorno Límite de la Personalidad los psicólogos mencionados? Para responder a estas preguntas se aplicó un tipo de entrevista semiestructurada a una muestra de 10 Psicólogos, los cuales tienen especialización en las escuelas mencionadas. Para dar cuenta de los resultados se utilizó un análisis por categorías, un análisis de contenidos y el Software NVIVO propio de metodologías cualitativas. Entre los principales resultados encontramos desde las cuatro escuelas diferencias teórico-practicas a la hora de entender y abordar el trastorno de personalidad límite, sin embargo, coinciden en desviarse de la visión entregada por el DSM-V, concibiéndolo como un manual psiquiátrico que inscribe y restringe al individuo, las orientaciones suscitan la comprensión del individuo orientado en primera instancia a verlo en su totalidad y subjetividad, dentro de la cual exhiben un funcionamiento particular. Además, el avance del proceso en psicoterapia se consigue estableciendo un vínculo terapeuta-paciente capaz de sostener la conducta desbordante característica de estos, asimismo, predomina el uso de técnicas, sin embargo, a pesar de coincidir en esto, cada escuela posee diversas técnicas características de sus enfoques</p>    
-            <p className='description-info underline'><a href="http://www.scielo.org.bo/scielo.php?script=sci_arttext&pid=S2077-21612019000200007">Ir al Link</a></p>     
-               {/* Fin de la investigación */}
+            
+            {displayResearches}
 
-               
-            {/* INVESTIGACIONES */}
-            <p className='description-info research'>
-            <span className='mark-bold'> <i className='fas fa-clipboard-check'></i> <a target="_blank" href="http://www.scielo.org.bo/scielo.php?script=sci_arttext&pid=S2077-21612019000200007">EL ABORDAJE CLÍNICO DE PERSONAS DIAGNOSTICADAS CON TRASTORNO LÍMITE DE LA PERSONALIDAD: UNA EXPLORACIÓN DE LAS ESCUELAS COGNITIVO-CONDUCTUAL, GESTALT, POSRACIONALISMO Y PSICOANÁLISIS</a></span>
-            </p>
-            <p className='description-info'><span className='mark-bold'>Resumen:</span></p>
-            <p className='description-info'>El diagnóstico del Trastorno Límite de la Personalidad ha ido en incremento en los últimos años, junto con ello, desde la psicología clínica se han diversificado, las formas de abordaje y tratamiento. La presente investigación tiene como objetivo analizar cómo entienden y abordan el Trastorno Límite de Personalidad psicólogos chilenos desde su respectiva formación y línea de abordaje desde las escuelas Cognitivo-Conductual, Gestalt, Psicoanálisis y Posracionalismo. Para esto se plantearon dos preguntas de investigación: ¿Cómo entienden el Trastorno Límite de la Personalidad los psicólogos de estas escuelas? Y ¿Cómo abordan el Trastorno Límite de la Personalidad los psicólogos mencionados? Para responder a estas preguntas se aplicó un tipo de entrevista semiestructurada a una muestra de 10 Psicólogos, los cuales tienen especialización en las escuelas mencionadas. Para dar cuenta de los resultados se utilizó un análisis por categorías, un análisis de contenidos y el Software NVIVO propio de metodologías cualitativas. Entre los principales resultados encontramos desde las cuatro escuelas diferencias teórico-practicas a la hora de entender y abordar el trastorno de personalidad límite, sin embargo, coinciden en desviarse de la visión entregada por el DSM-V, concibiéndolo como un manual psiquiátrico que inscribe y restringe al individuo, las orientaciones suscitan la comprensión del individuo orientado en primera instancia a verlo en su totalidad y subjetividad, dentro de la cual exhiben un funcionamiento particular. Además, el avance del proceso en psicoterapia se consigue estableciendo un vínculo terapeuta-paciente capaz de sostener la conducta desbordante característica de estos, asimismo, predomina el uso de técnicas, sin embargo, a pesar de coincidir en esto, cada escuela posee diversas técnicas características de sus enfoques</p>    
-            <p className='description-info underline'><a href="http://www.scielo.org.bo/scielo.php?script=sci_arttext&pid=S2077-21612019000200007">Ir al Link</a></p>     
-               {/* Fin de la investigación */}
+           <ReactPaginate 
+           previousLabel={"Anterior"}
+           nextLabel={"Siguiente"}
+           pageCount={pageCount}
+           onPageChange={changePage}
+           containerClassName={"paginationBtns"}
+           previousLinkClassName={"previousBtns"}
+           nextLinkClassName={"nextBtn"}
+           disabledClassName={"paginationDisabled"}
+           activeClassName={"paginationActive"}
+           />
 
-               
-            {/* INVESTIGACIONES */}
-            <p className='description-info research'>
-            <span className='mark-bold'> <i className='fas fa-clipboard-check'></i> <a target="_blank" href="http://www.scielo.org.bo/scielo.php?script=sci_arttext&pid=S2077-21612019000200007">EL ABORDAJE CLÍNICO DE PERSONAS DIAGNOSTICADAS CON TRASTORNO LÍMITE DE LA PERSONALIDAD: UNA EXPLORACIÓN DE LAS ESCUELAS COGNITIVO-CONDUCTUAL, GESTALT, POSRACIONALISMO Y PSICOANÁLISIS</a></span>
-            </p>
-            <p className='description-info'><span className='mark-bold'>Resumen:</span></p>
-            <p className='description-info'>El diagnóstico del Trastorno Límite de la Personalidad ha ido en incremento en los últimos años, junto con ello, desde la psicología clínica se han diversificado, las formas de abordaje y tratamiento. La presente investigación tiene como objetivo analizar cómo entienden y abordan el Trastorno Límite de Personalidad psicólogos chilenos desde su respectiva formación y línea de abordaje desde las escuelas Cognitivo-Conductual, Gestalt, Psicoanálisis y Posracionalismo. Para esto se plantearon dos preguntas de investigación: ¿Cómo entienden el Trastorno Límite de la Personalidad los psicólogos de estas escuelas? Y ¿Cómo abordan el Trastorno Límite de la Personalidad los psicólogos mencionados? Para responder a estas preguntas se aplicó un tipo de entrevista semiestructurada a una muestra de 10 Psicólogos, los cuales tienen especialización en las escuelas mencionadas. Para dar cuenta de los resultados se utilizó un análisis por categorías, un análisis de contenidos y el Software NVIVO propio de metodologías cualitativas. Entre los principales resultados encontramos desde las cuatro escuelas diferencias teórico-practicas a la hora de entender y abordar el trastorno de personalidad límite, sin embargo, coinciden en desviarse de la visión entregada por el DSM-V, concibiéndolo como un manual psiquiátrico que inscribe y restringe al individuo, las orientaciones suscitan la comprensión del individuo orientado en primera instancia a verlo en su totalidad y subjetividad, dentro de la cual exhiben un funcionamiento particular. Además, el avance del proceso en psicoterapia se consigue estableciendo un vínculo terapeuta-paciente capaz de sostener la conducta desbordante característica de estos, asimismo, predomina el uso de técnicas, sin embargo, a pesar de coincidir en esto, cada escuela posee diversas técnicas características de sus enfoques</p>    
-            <p className='description-info underline'><a href="http://www.scielo.org.bo/scielo.php?script=sci_arttext&pid=S2077-21612019000200007">Ir al Link</a></p>     
-               {/* Fin de la investigación */}
-
-               
-            {/* INVESTIGACIONES */}
-            <p className='description-info research'>
-            <span className='mark-bold'> <i className='fas fa-clipboard-check'></i> <a target="_blank" href="http://www.scielo.org.bo/scielo.php?script=sci_arttext&pid=S2077-21612019000200007">EL ABORDAJE CLÍNICO DE PERSONAS DIAGNOSTICADAS CON TRASTORNO LÍMITE DE LA PERSONALIDAD: UNA EXPLORACIÓN DE LAS ESCUELAS COGNITIVO-CONDUCTUAL, GESTALT, POSRACIONALISMO Y PSICOANÁLISIS</a></span>
-            </p>
-            <p className='description-info'><span className='mark-bold'>Resumen:</span></p>
-            <p className='description-info'>El diagnóstico del Trastorno Límite de la Personalidad ha ido en incremento en los últimos años, junto con ello, desde la psicología clínica se han diversificado, las formas de abordaje y tratamiento. La presente investigación tiene como objetivo analizar cómo entienden y abordan el Trastorno Límite de Personalidad psicólogos chilenos desde su respectiva formación y línea de abordaje desde las escuelas Cognitivo-Conductual, Gestalt, Psicoanálisis y Posracionalismo. Para esto se plantearon dos preguntas de investigación: ¿Cómo entienden el Trastorno Límite de la Personalidad los psicólogos de estas escuelas? Y ¿Cómo abordan el Trastorno Límite de la Personalidad los psicólogos mencionados? Para responder a estas preguntas se aplicó un tipo de entrevista semiestructurada a una muestra de 10 Psicólogos, los cuales tienen especialización en las escuelas mencionadas. Para dar cuenta de los resultados se utilizó un análisis por categorías, un análisis de contenidos y el Software NVIVO propio de metodologías cualitativas. Entre los principales resultados encontramos desde las cuatro escuelas diferencias teórico-practicas a la hora de entender y abordar el trastorno de personalidad límite, sin embargo, coinciden en desviarse de la visión entregada por el DSM-V, concibiéndolo como un manual psiquiátrico que inscribe y restringe al individuo, las orientaciones suscitan la comprensión del individuo orientado en primera instancia a verlo en su totalidad y subjetividad, dentro de la cual exhiben un funcionamiento particular. Además, el avance del proceso en psicoterapia se consigue estableciendo un vínculo terapeuta-paciente capaz de sostener la conducta desbordante característica de estos, asimismo, predomina el uso de técnicas, sin embargo, a pesar de coincidir en esto, cada escuela posee diversas técnicas características de sus enfoques</p>    
-            <p className='description-info underline'><a href="http://www.scielo.org.bo/scielo.php?script=sci_arttext&pid=S2077-21612019000200007">Ir al Link</a></p>     
-               {/* Fin de la investigación */}
-
-               
-            <div className="index-research">
+            {/* <div className="index-research">
                <p className="actual-page"> 1 </p> 
                <Link to="2">Próxima página</Link>
-            </div>
+            </div> */}
         </div>
   )
 }
