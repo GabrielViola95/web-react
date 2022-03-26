@@ -4,7 +4,7 @@
     /* Provisorio: */
     min-height: 90vh;
     font-family: sans-serif;
-    background: url("https://img.freepik.com/foto-gratis/viejo-fondo-textura-madera-vintage_55716-1138.jpg?size=626&ext=jpg") no-repeat;
+    background: url("../../assets/fondoInfoMobilDesigne.png") no-repeat;
     background-size: cover;
 }
 
@@ -14,17 +14,71 @@
 }
 
 .title-info{
-    background-color: aliceblue;
-    padding: 1rem 1rem;
+    padding: 5rem 2rem 1rem;
     font-family: 'Sacramento', sans-serif;
     font-size: 40px;
     transform: rotate(-3deg);
 }
 
 .description-info{
-    background-color: aliceblue;
-    padding: 0 2rem;
+    padding: .5rem 2rem;
     text-align: justify;
+}
+
+/* INFORMACION HOME */
+
+.Info-table{
+    margin-left: 10%;
+}
+
+.mark-bold{
+    font-weight: bold;
+    color: #281358;
+}
+
+.Info-table img{
+    width: 200px;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 1px 2px 10px black;
+}
+
+/* QUERIS */
+
+@media screen and (min-width: 1025px) {
+    
+    .Info__container {
+        /* Provisorio: */
+        min-height: 90vh;
+        font-family: sans-serif;
+    background: url("../../assets/fondoInfo.png") no-repeat;
+        background-size: cover;
+    }
+    .title-info{
+        padding: 7rem 2rem 1rem;
+        font-size: 80px;
+    }
+    
+    .description-info{
+        font-size: 20px;
+        line-height: 30px;
+        padding: .5rem 6rem;
+        text-align: justify;
+    }
+
+    .Info-table img{
+        width: 600px;
+        margin: 2rem;
+        border-radius: 10px;
+        box-shadow: 1px 2px 10px black;
+        transition: all 1s;
+    }
+
+    .Info-table img:hover{
+        transform: rotate(-10deg);
+        cursor: grab;
+    }
+
 }
 
 
@@ -38,11 +92,12 @@
 .sidebar {
     background: linear-gradient(90deg, rgb(34, 18, 61) 0%, rgb(50, 19, 99) 100%);
     z-index: 1;
-    position: fixed;
+    position: absolute;
     left: -250px;
     width: 250px;
-    height: 100%;
+    height: auto;
     transition: all .5s ease;
+    border-radius: 0 0 25px 0;
 }
 
 .sidebar header {
@@ -66,6 +121,10 @@
     border-top: 1px solid rgba(255,255,255,.1) ;
     border-bottom: 1px solid black;
     transition: .4s;
+}
+
+.sidebar ul a:nth-last-child(1) {
+    border-bottom: none;
 }
 
 .sidebar ul li:hover a{
@@ -131,4 +190,39 @@ label #cancel-sidebar{
 }
 .sidebar ul li ul li:hover{
     background: linear-gradient(90deg, rgb(49, 110, 151) 0%, rgb(33, 126, 163) 100%);
+}
+
+
+/* NAVEGACIÓN DE OTHERS */
+
+.title-info-others{
+    font-family: monospace, sans-serif;
+    padding: 10rem 2rem 1rem;
+    font-size: 40px;
+}
+
+.fa-dna{
+    transform: rotate(9deg);
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.giant{
+    font-size: 30px;
+}
+
+.research:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* QUERIS */
+
+@media screen and (max-width: 1025px) {
+    .title-info-others{
+        padding: 10rem 2rem 1rem;
+        font-size: 25px;
+    }
 }
