@@ -52,10 +52,6 @@ const Investigación = () => {
            activeClassName={"paginationActive"}
            />
 
-            {/* <div className="index-research">
-               <p className="actual-page"> 1 </p> 
-               <Link to="2">Próxima página</Link>
-            </div> */}
         </div>
   )
 }

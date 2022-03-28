@@ -18,7 +18,7 @@ const Card = (props) => {
                 {description && <p className="p-description">{props.description}</p> }
                 <p onClick={handleDescription} className="p-description read-more">{!description ? "Leer más..." : "Ocultar..."}</p>
             </div>
-            <button className="btn-homelink">INVESTIGAR <i class="fa-solid fa-play"></i></button>
+            <button className="btn-homelink"><a href={props.link} target="_blank" > INVESTIGAR <i class="fa-solid fa-play"></i></a></button>
         </div>
     )
 } 

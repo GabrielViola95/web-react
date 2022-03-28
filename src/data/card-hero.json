@@ -1,0 +1,51 @@
+[
+    {
+        "id": "a1",
+        "title": "¿Qué es el Apego?",
+        "description": "Sin duda alguna, la teoría más famosa de la psicología. Hoy vamos a empezar a contarte algunas cosas sobre ella. Comenzamos a construir la base de un enorme edificio ¡No te lo pierdas!",
+        "image": "https://i.ytimg.com/vi/pJgef-9qFXE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDil_5y5ZuHLXCTe13oMo7502bwuQ",
+        "link": "https://www.youtube.com/watch?v=pJgef-9qFXE"
+    },
+    {
+        "id": "a2",
+        "title": "¿Qué son las Emociones?",
+        "description": "Hoy vamos a hablar sobre las emociones. Vamos a poner a prueba tu conocimiento como homo psicologicus y ver si sos capaz de reconocer todas las emociones básicas! Y si no, no te preocupes ¡Este video te va a ayudar!",
+        "image": "https://i.ytimg.com/vi/x_bq9PvnclA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD4AHcIYviaJSHU0sFhRgFvYxTkng",
+        "link": "https://www.youtube.com/watch?v=x_bq9PvnclA"
+    },
+    {
+        "id": "a3",
+        "title": "¿Quién es Vittorio Guidano?",
+        "description": "El Posracionalista está inspirado directamente en el moderno enfoque de psicoterapia conocido como POSRACIONALISMO. Nombre a su vez asociado a Vittorio Guidano, su creador. Ahora mismo te voy a contar quién es y de donde viene este genio de la mente ¡No te lo pierdas!",
+        "image": "https://i.ytimg.com/vi/--Hh2VKpLu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCZiyssBIG5d8Axn553fyCxb9uFtA",
+        "link": "https://www.youtube.com/watch?v=--Hh2VKpLu0&t"
+    },
+    {
+        "id": "a4",
+        "title": "¿Qué tipos de Apego existen?",
+        "description": "Hoy vas a descubrir qué patrones de apego posees y cómo eso se relaciona con tu vida afectiva y relacional. Si te gusta el video no te olvides de poner like, compartirlo, suscribirte y activar la campanita para seguir viendo más videos",
+        "image": "https://i.ytimg.com/vi/w-B1tLjiuEs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBwTL7Y5tpjcyG4pKKb9RDPA-O05Q",
+        "link": "https://www.youtube.com/watch?v=w-B1tLjiuEs"
+    },
+    {
+        "id": "a5",
+        "title": "¿Qué es una OSP? ",
+        "description": "Hoy nos introduciremos en un concepto fundamental para el posracionalismo y una herramienta explicativa que permite entender mejor a los homo psicologicus, hablaremos acerca de qué es una Organización de Significado Personal. Además, para entenderlo mejor, analizaremos en términos generales uno de los personajes de la reconocida serie La Casa de Papel",
+        "image": "https://i.ytimg.com/vi/eI0N21pa98E/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBoSt0lgyK34_JiDAo3z86balyTTQ",
+        "link": "https://www.youtube.com/watch?v=eI0N21pa98E&t"
+    },
+    {
+        "id": "a6",
+        "title": "Los tipos de INTELIGENCIA",
+        "description": "Mucho se habla de la inteligencia pero poco se reflexiona acerca de dónde viene su significado y para qué se utiliza ¿Qué es la inteligencia? En verdad, mucho se podría hablar de ella en términos posracionalistas... ",
+        "image": "https://i.ytimg.com/vi/P97_dNDc37k/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBldIlhgj_aDo7Cf_fBINRmdahuWg",
+        "link": "https://www.youtube.com/watch?v=P97_dNDc37k"
+    },
+    {
+        "id": "a7",
+        "title": "¿Cómo es un OBSESIVO?",
+        "description": "Vamos a entender cómo piensan, sienten y se comportan las personas que podemos llamar Obsesivas. En particular, en este video se va a analizar a Charles Mcgill, un personaje de la serie Better Call Saul que viene muy bien para comprender esta OSP. Tal vez descubras muchas cosas en común con vos mismo o bien te ayude a comprender mejor a las personas de tu entorno con esta Organización.",
+        "image": "https://i.ytimg.com/vi/jMMBhhSx214/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA7cV-2Imr4UKRZF3PfHiHEDvm--Q",
+        "link": "https://www.youtube.com/watch?v=jMMBhhSx214&t"
+    }
+]

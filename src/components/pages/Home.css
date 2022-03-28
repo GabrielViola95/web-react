@@ -138,7 +138,10 @@ video {
     justify-content: center;
     background-color: rgb(13, 7, 31);
 }
+.bg-dark{
 
+    background-color: #0d071f; 
+}
 
 /* CARD */
 
@@ -205,6 +208,11 @@ video {
     font-size: 12px;
     text-decoration: underline;
     cursor: pointer;
+}
+
+.btn-homelink a{
+    text-decoration: none;
+    color: #fff;
 }
 
 /* ***MEDIA QUERYS*** */

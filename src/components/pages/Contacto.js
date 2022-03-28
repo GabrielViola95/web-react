@@ -1,11 +1,12 @@
-import React from 'react'
+import './Contacto.css'
 
 const Contacto = () => {
   return (
-    <div>
-        <h2>Contacto</h2>
-    </div>
+    <div className='loginPage'>
+            <p>Acceder con Google para continuar</p>
+            <button className='login-with-google-btn'> Acceder con Google</button>
+        </div>
   )
 }
 
-export default Contacto
+export default Contacto;

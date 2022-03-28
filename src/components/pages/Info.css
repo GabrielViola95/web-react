@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
 .Info__container {
     /* Provisorio: */
@@ -18,18 +19,22 @@
     font-family: 'Sacramento', sans-serif;
     font-size: 40px;
     transform: rotate(-3deg);
+    
 }
+
 .title-info-osp{
     padding: 9rem 2rem 1rem;
     font-family: 'Sacramento', sans-serif;
     font-size: 40px;
     transform: rotate(-3deg);
+    
 }
 
 .description-info{
     padding: .5rem 2rem;
     text-align: justify;
 }
+
 
 /* INFORMACION HOME */
 
@@ -216,7 +221,7 @@ label #cancel-sidebar{
 /* NAVEGACIÓN DE OTHERS */
 
 .title-info-others{
-    font-family: monospace, sans-serif;
+    font-family: 'Shadows Into Light', cursive, sans-serif;
     padding: 10rem 2rem 1rem;
     font-size: 40px;
 }
@@ -293,4 +298,24 @@ label #cancel-sidebar{
 }
 
 
+/* VIDEOS */
 
+.title-videos-osp{
+    font-family: 'Shadows Into Light', cursive, sans-serif;
+    font-size: 25px;
+    margin-top: 2rem;
+    color: #281358;
+}
+
+.align-end{
+    text-align: end;
+}
+
+
+@media screen and (min-width: 1025px) {
+.title-videos-osp{
+    font-size: 40px;
+}
+
+
+}

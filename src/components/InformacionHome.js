@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const InformacionHome = () => {
     return (
         <div className="Info-table">
-            <h2 className='title-info'>El Posracionalismo</h2>
+            <h2 className='title-info'>El Posracionalismo </h2>
             <p className='description-info'>La <span className='mark-bold'>Psicoterapia Cognitiva Posracionalista</span>  es un tipo de terapia desarrollada en los años 90 por el neuropsiquiatra italiano <span className='mark-bold'>Vittorio Guidano</span>. Se enmarca dentro de una perspectiva constructivista, que entiende que la realidad la vamos construyendo de forma única y personal.
             </p>
             <p className='description-info'>Así, habría tantas realidades como personas. Esta terapia, además, le da mucha importancia a la<span className='mark-bold'> identidad personal y al lenguaje</span>. En este artículo conoceremos sus características generales, así como las ideas de Guidano y algunas de las técnicas que utiliza a través de su modelo.</p>
