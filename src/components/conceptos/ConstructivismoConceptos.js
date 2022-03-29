@@ -39,7 +39,7 @@ const ConstructivismoConceptos = () => {
             
 
             <p className='description-info'>
-                Hasta acá nuestro resumen del <span className='mark-bold'>Constructivismo</span>, espero te haya resultado interesante. <i class="fa-solid fa-thumbs-up"></i>
+                Hasta acá nuestro resumen del <span className='mark-bold'>Constructivismo</span>, espero te haya resultado interesante. <i className="fa-solid fa-thumbs-up"></i>
             </p>
         </div>
   )

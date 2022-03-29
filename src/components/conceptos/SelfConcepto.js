@@ -17,14 +17,14 @@ const SelfConcepto = () => {
             <p className='description-info'>
             En el campo de la psicología el primer estudio sistemático de la conciencia de uno mismo se encuentra en los <span className='mark-bold'>Principios de Psicología (1890) de William James</span>, quien dividió el sí mismo en tres partes que lo constituyen:
             </p>
-            <p className='description-info space-between'><span className='mark-bold'><i class="fa-solid fa-child"></i> El sí mismo material</span>: La conciencia de su cuerpo, de su ambiente y sus bienes materiales; </p>
-            <p className='description-info space-between'><span className='mark-bold'><i class="fa-solid fa-users"></i> El sí mismo social</span>: Lo que cada uno cree que los demás piensan de su persona y, por otro lado, los valores y las normas que comparte con la sociedad en que vive;</p>
-            <p className='description-info space-between'><span className='mark-bold'><i class="fa-solid fa-ghost"></i> El sí mismo espiritual</span>: El autoconocimiento que la persona tiene de su propia existencia.</p>
+            <p className='description-info space-between'><span className='mark-bold'><i className="fa-solid fa-child"></i> El sí mismo material</span>: La conciencia de su cuerpo, de su ambiente y sus bienes materiales; </p>
+            <p className='description-info space-between'><span className='mark-bold'><i className="fa-solid fa-users"></i> El sí mismo social</span>: Lo que cada uno cree que los demás piensan de su persona y, por otro lado, los valores y las normas que comparte con la sociedad en que vive;</p>
+            <p className='description-info space-between'><span className='mark-bold'><i className="fa-solid fa-ghost"></i> El sí mismo espiritual</span>: El autoconocimiento que la persona tiene de su propia existencia.</p>
             <p className='description-info'>
             <span className='mark-bold'>Vittorio Guidano</span>, el creador del posracionalismo, incorpora la noción de <span className='mark-bold'>self</span> y lo articula en su marco teórico de una forma auténtica. El autor elaboró un modelo teórico basado en los postulados de los trabajos de Francisco Varela y Humberto Maturana, en los cuales <span className='mark-bold'>el Sí Mismo (Self) se comprende como una unidad autopoiética que define los límites de su experiencia a partir de la recurrencia de sus esquemas autoorganizativos tácitos</span>. Esto significa que el self es un proceso resultante de ese interjuego contante entre un registro tácito de la experiencia y su explicación. Una construcción constante y dinámica de sí mismo.
             </p>
             <p className='description-info'>
-                Hasta acá nuestro resumen del concepto de <span className='mark-bold'>Self</span>, espero te haya resultado interesante. <i class="fa-solid fa-thumbs-up"></i>
+                Hasta acá nuestro resumen del concepto de <span className='mark-bold'>Self</span>, espero te haya resultado interesante. <i className="fa-solid fa-thumbs-up"></i>
             </p>
             
         </div>

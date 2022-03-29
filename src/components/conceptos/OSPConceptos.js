@@ -69,7 +69,7 @@ const OSPConceptos = () => {
 
 
             <p className='description-info'>
-                Hasta acá nuestro resumen de las <span className='mark-bold'>OSP</span>, espero te haya resultado interesante. <i class="fa-solid fa-thumbs-up"></i>
+                Hasta acá nuestro resumen de las <span className='mark-bold'>OSP</span>, espero te haya resultado interesante. <i className="fa-solid fa-thumbs-up"></i>
             </p>
         </div>
   )

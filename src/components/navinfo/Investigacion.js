@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import JsonResearches from '../../data/researches.json'
 import ReactPaginate from 'react-paginate';
 import Research from '../Research';
