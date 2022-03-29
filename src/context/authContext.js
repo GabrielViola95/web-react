@@ -28,7 +28,8 @@ export function AuthProvider({children}) {
     const logout = () => {
         signOut(auth).then(()=>{
             localStorage.clear();
-            setIsAuth(false)
+            setIsAuth(false);
+            navigate("/");
         })
         
     };
@@ -37,6 +38,7 @@ export function AuthProvider({children}) {
         signInWithEmailAndPassword(auth, email, password).then((result) => {
             localStorage.setItem("isAuth", true );
             setIsAuth(true);
+            navigate("/");
         })
     }
 
@@ -45,6 +47,7 @@ export function AuthProvider({children}) {
         return signInWithPopup(auth, googleProvider).then((result) => {
             localStorage.setItem("isAuth", true );
             setIsAuth(true);
+            navigate("/");
         })
     }
 

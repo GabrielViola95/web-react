@@ -54,10 +54,19 @@ video {
 }
 
 .setOffline-btn{
-    background: rgb(71, 7, 71);
+    background: rgb(58, 13, 88);
     padding: 5px;
     color: #fff;
     border-radius: 5px;
+    cursor: pointer;
+    transition: 200ms all;
+    outline: none;
+}
+.setOffline-btn:hover{
+    background: rgb(71, 7, 71);
+}
+.setOffline-btn:focus{ 
+    transform: scale(.9)
 }
 
 

@@ -29,7 +29,7 @@ const CuriosidadesInfo = () => {
             </p>
 
             <p className='description-info'>
-                Hasta acá algunas <span className='mark-bold'>curiosidades</span> interesantes que queríamos destacar. Espero te hayan resultado interesante, pronto agregarémos más cosas interesantes. <i class="fa-solid fa-thumbs-up"></i>
+                Hasta acá algunas <span className='mark-bold'>curiosidades</span> que queríamos destacar, espero te hayan resultado interesante. Pronto agregarémos más cosas interesantes. <i class="fa-solid fa-thumbs-up"></i>
             </p>
         </div>
   )

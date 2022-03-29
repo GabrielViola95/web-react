@@ -1,7 +1,6 @@
 import youtube from '../assets/youtube.png'
 import fondo from "../assets/videos/fondoposracionalismo.mp4"
 import { useAuth } from '../context/authContext';
-import { auth } from '../firebase'
 
 const Hero = () => {
   const {user, logout, isAuth} = useAuth();
@@ -19,7 +18,7 @@ const Hero = () => {
       <video loop autoPlay src={fondo} />
       <div className="acount-wrap">
       <div className="acount-data">
-      {isAuth ? (<><p className='offline'>No conectado</p></>) 
+      {!user ? (<><p className='offline'>No conectado</p></>) 
       : (<>
         <p className='online'>
           {user.name || user.email}
