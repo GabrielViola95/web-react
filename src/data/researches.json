@@ -1,48 +1,48 @@
 [
     {
-        "id":4,
+        "id":"investigacion4",
         "title": "Bases teóricas en la conformación de la terapia cognitiva en la Argentina",
         "link": "https://www.redalyc.org/pdf/284/28422741002.pdf",
         "resume": "El autor reflexiona sobre la aparición de la psicoterapia cognitiva en la Argentina, revisando las bases teóricas que llevan al surgimiento de este modelo y a la posterior fundación de la Asociación Argentina de Terapia Cognitiva. En ese marco recrea las discusiones que se daban entre las asociaciones profesionales       en el contexto internacional respecto del rol de la cognición en los tratamientos psicológicos. A través de entrevistas abiertas y recurrentes con los primeros terapeutas cognitivos de la Argentina indaga las vivencias teóricas y personales que contribuyen a su desarrollo de este ámbito. A su vez describe el peso  de autores en el campo de la psicología que contribuyeron al desarrollo de este modelo en la Argentina, como son los casos de Vittorio Guidano, Aaron Beck, Michael Mahoney o Hans Eysenck, entre otros."
     },
     {
-        "id":2,
+        "id":"investigacion2",
         "title": "Estilo afectivo y estilos de personalidad internamente orientados (Inward) y externamente orientados (Outward): modelo de estilos emocionales de personalidad",
         "link": "https://www.scielo.cl/scielo.php?script=sci_arttext&pid=S0717-92272010000500009",
         "resume": "Introducción: En este artículo revisamos los principales avances científicos aportados por la Neurociencia Afectiva en los últimos años respecto a la regulación emocionaly los aspectos centrales del Modelo Constructivista Post-Racionalista. La integración de ambas conceptualizaciones nos permite comprender de mejor manera cómo los seres humanos vivenciamos la emoción. Materiales y Métodos: Se revisa investigaciones experimentales relevantes, se elabora y presenta un modelo de estilos emocionales. Conclusiones: Considerando variables tales como la personalidad y el temperamento, se propone un modelo de los distintos estilos de procesar y vivenciar la emoción, y algunos lineamientos para planificar tratamientos más efectivos."
     },
     {
-        "id": 3,
+        "id": "investigacion3",
         "title": "Identidad personal como organización cognoscente: examinando la relación entre constructivismo y cognitivismo postracionalista",
         "link": "http://www.scielo.org.co/pdf/cesp/v12n3/2011-3080-cesp-12-03-119.pdf",
         "resume": "El enfoque postracionalista de Vittorio Guidano en psicología intenta superar la forma en que el objetivismo cartesiano concibe la relación entre sujeto y realidad dentro del paradigma cognitivo tradicional. Esta teoría debe buena parte de su concepto fundamental (la identidad personal como organización cognoscente) al constructivismo de Humberto Maturana. Sin embargo, a pesar de la estrecha conexión, la relación conceptual entre ambos enfoques se mantiene obscura. Este artículo examina en detalle la relación entre el postracionalismo de Vittorio Guidano y el constructivismo de Humberto Maturana en torno al análisis del concepto de identidad personal para así clarificar sus coincidencias y divergencias."
     },
     {
-        "id":5,
+        "id":"investigacion5",
         "title": "Sistema de Organización de Significado Personal, Apego y Esquemas Maladaptativos Tempranos y su consideración en psicoterapia cognitiva con niños, niñas y adolescentes",
         "link": "https://repositorio.ucp.edu.co/bitstream/10785/4121/1/DDEPCEPNA50.pdf",
         "resume": "El presente artículo de revisión se desarrolló desde el modelo post-racionalista de psicoterapia cognitiva, enmarcado en dos teorías, la primera de la Organización De Significado Personal definida por Vittorio Guidano y la segunda los Esquemas Maladaptativos Tempranos definidos por Jeffrey Young. Se analizan estas dos teorías a partir del sustento que logra darse desde los planteamientos de la teoría de los vínculos de apego planteados por John Bowlby, de forma tal que se describe la estructura individual en el proceso de identidad, de acuerdo a la construcción de la Organización de Significado Personal y los Esquemas Maladaptativos Tempranos. Finalmente se pretende resaltar la relación y la importancia que tienen estos planteamientos en la intervención psicoterapéutica con niños y adolescentes, con el fin de enriquecer la praxis del psicólogo clínico en los procesos de evaluación e intervención presentando una nueva propuesta para la comprensión de los procesos psicológicos."
     },
     {
-        "id": 7,
+        "id": "investigacion7",
         "title": "Abordaje narrativo y estratégico en el trastorno por ansiedad social",
         "link": "https://scielo.conicyt.cl/pdf/rchnp/v53n1/art05.pdf",
         "resume": "El trastorno de ansiedad social (TAS) tiene una gran relevancia clínica tanto por el deterioro que provoca y comorbilidad. El tratamiento estándar es la terapia cognitiva conductual, a través de la exposición y reestructuración cognitiva, y adicionalmente el uso de psicofármacos. Sin embargo, es necesario ampliar la conceptualización y el abordaje psicoterapéutico, agregando una narrativa enfoque a través de perspectivas constructivistas y construccionistas. Desde este punto de vista, son contextos de procesos de nulidad y renuncia. Por lo tanto, el TAS es multidimensional y tiene dos polaridades, una constitutiva y una operativa, que guían la terapia. Este modelo aumenta la comprensión y reflexión sobre el fenómeno y posibilitar nuevas opciones para intervención."
     },
     {
-        "id": 8,
+        "id": "investigacion8",
         "title": "Duelo. Aproximación posracionalista",
         "link": "https://pdfcoffee.com/duelo-aproximacion-posracionalista-pdf-free.html",
         "resume": "Las experiencias de pérdida y duelo constituyen un fenómeno relevante para la Psicología por ser acontecimientos inevitables en la vida de todo ser humano. Aun cuando son categorías de la experiencia human, y gran parte de las personas son resilientes a la pérdida afectiva, en numerosas ocasiones desencadenan desórdenes clínicos. En el presente trabajo se expone una aproximación, desde la visión constructivista, sobre la pérdida y el duelo, señalando cuáles son las condiciones que facilitan el surgimiento de psicopatología después de una pérdida significativa y cuáles son las que facilitan el proceso de duelo y que ayudan a las personas a superar la pérdida, valorando la proactividad y el carácter subjetivo del ser humano."
     },
     {
-        "id":6,
+        "id":"investigacion6",
         "title": "La escritura emocional como una herramienta para el tratamiento psicológico del tabaquismo",
         "link": "https://www.scielosp.org/article/spm/2007.v49suppl2/s280-s289/",
         "resume": "OBJETIVO: Mostrar la utilidad e importancia de la escritura emocional como parte del tratamiento psicológico para la cesación del tabaquismo. MATERIAL Y MÉTODOS: Se revisaron los expedientes de los pacientes atendidos de 2001 a 2006 en la Clínica Contra el Tabaquismo de la Facultad de Medicina de la UNAM y se eligieron 10 cartas de despedida al cigarrillo. La escritura de este tipo de carta forma parte del tratamiento psicológico del tabaquismo; su realización coincide con la fecha para dejar de fumar, al final de la segunda semana del tratamiento. RESULTADOS: Se presenta el texto completo de 10 cartas escritas por fumadores atendidos en la Clínica. Se eligieron aquellas que muestran la compleja intensidad de la dependencia psicológica que se desarrolla en los fumadores y ponen de manifiesto la importancia de brindar apoyo para la resolución de esta dependencia. CONCLUSIONES: La escritura emocional puede ser una herramienta muy importante en el tratamiento psicológico del tabaquismo, pues permite al fumador expresar y compartir sus pensamientos íntimos y vivencias relacionados con el tabaco y con el tabaquismo."
     },
     {
-        "id":1,
+        "id":"investigacion1",
         "title": "EL ABORDAJE CLÍNICO DE PERSONAS DIAGNOSTICADAS CON TRASTORNO LÍMITE DE LA PERSONALidAD: UNA EXPLORACIÓN DE LAS ESCUELAS COGNITIVO-CONDUCTUAL, GESTALT, POSRACIONALISMO Y PSICOANÁLISIS",
         "link": "http://www.scielo.org.bo/scielo.php?script=sci_arttext&pid=S2077-21612019000200007",
         "resume": "El diagnóstico del Trastorno Límite de la Personalidad ha ido en incremento en los últimos años, junto con ello, desde la psicología clínica se han diversificado, las formas de abordaje y tratamiento. La presente investigación tiene como objetivo analizar cómo entienden y abordan el Trastorno Límite de Personalidad psicólogos chilenos desde su respectiva formación y línea de abordaje desde las escuelas Cognitivo-Conductual, Gestalt, Psicoanálisis y Posracionalismo. Para esto se plantearon dos preguntas de investigación: ¿Cómo entienden el Trastorno Límite de la Personalidad los psicólogos de estas escuelas? Y ¿Cómo abordan el Trastorno Límite de la Personalidad los psicólogos mencionados? Para responder a estas preguntas se aplicó un tipo de entrevista semiestructurada a una muestra de 10 Psicólogos, los cuales tienen especialización en las escuelas mencionadas. Para dar cuenta de los resultados se utilizó un análisis por categorías, un análisis de contenidos y el Software NVIVO propio de metodologías cualitativas. Entre los principales resultados encontramos desde las cuatro escuelas diferencias teórico-practicas a la hora de entender y abordar el trastorno de personalidad límite, sin embargo, coinciden en desviarse de la visión entregada por el DSM-V, concibiéndolo como un manual psiquiátrico que inscribe y restringe al individuo, las orientaciones suscitan la comprensión del individuo orientado en primera instancia a verlo en su totalidad y subjetividad, dentro de la cual exhiben un funcionamiento particular. Además, el avance del proceso en psicoterapia se consigue estableciendo un vínculo terapeuta-paciente capaz de sostener la conducta desbordante característica de estos, asimismo, predomina el uso de técnicas, sin embargo, a pesar de coincidir en esto, cada escuela posee diversas técnicas características de sus enfoques"

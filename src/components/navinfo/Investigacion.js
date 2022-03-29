@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import JsonResearches from '../../data/researches.json'
 import ReactPaginate from 'react-paginate';
+import Research from '../Research';
 
-const Investigación = () => {
+const Investigacion = () => {
    const [researches, setResearches] = useState(JsonResearches.slice(0, 9));
    const [pageNumber, setPageNumber] = useState(0);
 
@@ -12,13 +13,7 @@ const Investigación = () => {
    
    const displayResearches = researches.slice(pagesVisited, pagesVisited + researchesPerPage).map((research) => {
       return (
-         <>
-            <p className='description-info research'>
-               <span className='mark-bold'> <i className='fas fa-clipboard-check'></i> <a target="_blank" href={research.link}>{research.title}</a></span>
-            </p>
-            <p className='description-info'><span className='mark-bold'>Resumen:</span></p>
-            <p className='description-info'>{research.resume}</p>
-            <p className='description-info underline'><a href={research.link}>Ir al Link</a></p>
+         <> <Research key={research.id} id={research.id} link={research.link} resume={research.resume} title={research.title}/>
          </>
       )
    })
@@ -40,7 +35,7 @@ const Investigación = () => {
             
             {displayResearches}
 
-           <ReactPaginate 
+           {/* <ReactPaginate 
            previousLabel={"Anterior"}
            nextLabel={"Siguiente"}
            pageCount={pageCount}
@@ -50,10 +45,10 @@ const Investigación = () => {
            nextLinkClassName={"nextBtn"}
            disabledClassName={"paginationDisabled"}
            activeClassName={"paginationActive"}
-           />
+           /> */}
 
         </div>
   )
 }
 
-export default Investigación
+export default Investigacion

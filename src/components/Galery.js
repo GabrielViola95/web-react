@@ -14,8 +14,8 @@ const Galery = () => {
 
    const displayCards = cards.slice(pagesVisited, pagesVisited + cardsPerPage).map((card) => {
     return (
-      <div className="card-wrap">
-      <Card key={card.id} title={card.title} description={card.description} image={card.image} link={card.link} />
+      <div className="card-wrap" key={card.id}>
+      <Card title={card.title} description={card.description} image={card.image} link={card.link} />
       </div>
     )
  })
@@ -36,7 +36,7 @@ const Galery = () => {
   
   
 </div>
-<ReactPaginate 
+{/* <ReactPaginate
      previousLabel={"<"}
      nextLabel={">"}
      pageCount={pageCount}
@@ -46,7 +46,7 @@ const Galery = () => {
      nextLinkClassName={"nextBtn"}
      disabledClassName={"paginationDisabled"}
      activeClassName={"paginationActive"}
-     />
+     /> */}
     </div>
     
   )

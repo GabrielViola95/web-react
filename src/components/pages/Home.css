@@ -25,6 +25,42 @@ video {
     z-index: -1;
 }
 
+.acount-wrap{
+    position: absolute;
+    display: flex;
+    gap: 1rem;
+    top: 90px;
+    left: 20px;
+}
+
+.acount-data{
+    
+    display: flex;
+    gap: 1rem;
+    font-size: 15px;
+    align-items: center;
+}
+
+.acount-data hr{
+    color: rgba(255, 255, 255, 0.295);
+}
+
+.online{
+    color: #fff;
+}
+
+.offline{
+    color: rgba(128, 128, 128, 0.363);
+}
+
+.setOffline-btn{
+    background: rgb(71, 7, 71);
+    padding: 5px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
 .Hero-wrap {
     text-align: left;
     height: 20vh;

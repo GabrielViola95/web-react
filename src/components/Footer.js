@@ -10,7 +10,7 @@ const Footer = () => {
                     "Somos expresiones de un número incalculable de realidades personales en competencia" <small>M. Mahoney</small> 
                 </p>
                 <p className="footer-subscription-text">
-                  Puedes consultarnos por aquí <i class="fa-solid fa-arrow-down"></i>
+                  Puedes consultarnos por aquí <i className="fa-solid fa-arrow-down"></i>
               </p>
               <div className='input-areas'>
                   
@@ -47,7 +47,7 @@ const Footer = () => {
               <div className="social-media-wrap">
                   <div className="footer-logo">
                       <a href='https://www.youtube.com/channel/UCaMiKcibLN6N04Cfogz8Pcw' target="_blank" className='social-logo'>
-                          elPosracionalista <i class="fa-solid fa-brain"></i>
+                          elPosracionalista <i className="fa-solid fa-brain"></i>
                       </a>
                   </div>
                   <small className="website-rights"> elPosracionalista © 2022 </small>

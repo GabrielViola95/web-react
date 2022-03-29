@@ -1,5 +1,5 @@
 
-.loginPage {
+.login_page {
     width: 100%;
     height: calc(100vh - 80px);
     display: flex;
@@ -10,7 +10,7 @@
     background: #281358;
   }
   
-  .loginPage p {
+  .acces-p {
     display: block;
     font-size: 40px;
     margin-bottom: 4rem;
@@ -30,6 +30,7 @@
   }
 
 .login-with-google-btn {
+  margin-top: 2rem;
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
     padding: 5px 16px 12px 42px;
@@ -64,8 +65,62 @@
     cursor: not-allowed;
   }
 
+  .form__main{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    /* box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25); */
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin-bottom: 2rem;
+    width: 400px;
+    box-shadow: 10px 10px 0 rgb(74, 10, 104);
+  }
+
+  .input-wrap{
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .label-form{
+    display: block;
+    color: grey;
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+  .btn-wrapper{
+    display: flex; 
+    justify-content: center;
+  }
+
+  .input-form{
+    height: 35px;
+    outline: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-family: sans-serif;
+  }
+
+  .input-form:focus{
+    box-shadow: 0 -1px 0 rgb(74, 10, 104), 0 2px 4px rgb(100, 17, 138),
+      0 0 0 3px #c8dafc;
+      outline: none;
+  }
+
+  .remember-acount{
+    font-size: 18px;
+  }
+
+.link-toresgistrate{
+  text-decoration: underline;
+  margin-left: .5rem;
+}
+
   @media screen and (max-width: 960px) {
-    .loginPage p {
+    .acces-p {
         font-size: 20px;
     }
 
@@ -84,8 +139,7 @@
         
       }
 
-      
-    
-
-
+      .form__main{
+        width: 270px;
+      }
   }

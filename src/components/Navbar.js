@@ -2,10 +2,15 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png'
 import './Navbar.css';
+import { useAuth, isAuth } from '../context/authContext';
 
 const Navbar = () => {
+    const {user, logout} = useAuth();
 
     const [showNavbar, setShowNavbar] = useState(false);
+
+
+    
 
     const handleNavbar = () => {
         setShowNavbar(!showNavbar);
@@ -14,6 +19,7 @@ const Navbar = () => {
     const closeMobileMenu = () => {
         setShowNavbar(!showNavbar)
     };
+
 
     return (
         <nav className='navbar_main'>
@@ -34,7 +40,7 @@ const Navbar = () => {
                         <Link className='nav-links' to="/info" >Información</Link>
                     </li >
                     <li onClick={closeMobileMenu} className="nav-item"><Link className='nav-links' to="/foro" >Foro</Link></li>
-                    <li onClick={closeMobileMenu} className="nav-item"><Link className='nav-links' to="/login" >Login</Link></li>
+                    <li onClick={closeMobileMenu} className="nav-item"><Link className='nav-links' to="/login" >Ingresar</Link></li>
                 </ul>
             </div>
         </nav>

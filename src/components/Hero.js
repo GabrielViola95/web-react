@@ -1,10 +1,34 @@
 import youtube from '../assets/youtube.png'
 import fondo from "../assets/videos/fondoposracionalismo.mp4"
+import { useAuth } from '../context/authContext';
+import { auth } from '../firebase'
 
 const Hero = () => {
+  const {user, logout, isAuth} = useAuth();
+
+  const handleLogOut = async () => {
+    try {
+      await logout();
+    } catch (error) {
+      console.log(error)
+    }
+    
+  };
   return (
     <div className="Hero-container">
       <video loop autoPlay src={fondo} />
+      <div className="acount-wrap">
+      <div className="acount-data">
+      {isAuth ? (<><p className='offline'>No conectado</p></>) 
+      : (<>
+        <p className='online'>
+          {user.name || user.email}
+          </p><button onClick={handleLogOut} className='setOffline-btn'>Desconectarse</button>
+      </>
+      )}
+      </div>
+      <hr />
+      </div>
         <div className="Hero-wrap">
           <div className="first-line">
           <h2 className='text welcome'>Bienvenidos a</h2>

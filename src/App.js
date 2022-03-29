@@ -11,20 +11,26 @@ import Foro from './components/pages/Foro';
 import Home from './components/pages/Home';
 import Info from './components/pages/Info';
 import SelfConcepto from './components/conceptos/SelfConcepto';
-import Investigación from './components/navinfo/Investigación';
+import Investigacion from './components/navinfo/Investigacion';
 import DocumentosInfo from './components/navinfo/DocumentosInfo';
 import VideosInfo from './components/navinfo/VideosInfo';
 import CuriosidadesInfo from './components/navinfo/CuriosidadesInfo';
 import EjemplosInfo from './components/navinfo/EjemplosInfo';
 import OtrosInfo from './components/navinfo/OtrosInfo';
+import { AuthProvider } from "./context/authContext";
+import Ingresar from './components/pages/Ingresar';
+import { ProtectedRoute } from './components/ProtecterRouter';
 
 function App() {
   return (
     <>
       <Router>
+        <AuthProvider>
         <Navbar />
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={
+          <ProtectedRoute><Home /></ProtectedRoute> 
+          } />
           <Route path='/info' element={<Info/>}>
             <Route index element={<InformacionHome/>} />
             <Route path='posracionalismo' element={<InformacionHome/>} />
@@ -32,8 +38,8 @@ function App() {
             <Route path='self' element={<SelfConcepto/>}/>
             <Route path='osp' element={<OSPConceptos/>}/>
             <Route path='constructivismo' element={<ConstructivismoConceptos/>}/>
-            <Route path='investigacion' element={<Investigación/>}>
-              <Route index element={<Investigación/>} />
+            <Route path='investigacion' element={<Investigacion/>}>
+              <Route index element={<Investigacion/>} />
             </Route>
             <Route path='documentos' element={<DocumentosInfo/>}/>
             <Route path='curiosidades' element={<CuriosidadesInfo/>}/>
@@ -42,8 +48,10 @@ function App() {
             <Route path='otros' element={<OtrosInfo/>}/>
           </Route>
           <Route path='/foro' element={<Foro/>}/>
-          <Route path='/login' element={<Contacto/>}/>
+          <Route path='/login' element={<Ingresar/>}/>
+          <Route path='/signup' element={<Contacto />}/>
         </Routes>
+        </AuthProvider>
         <Footer />
       </Router>
     </>
