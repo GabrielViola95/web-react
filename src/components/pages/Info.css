@@ -251,6 +251,37 @@ label #cancel-sidebar{
     color: #281358;
 }
 
+/* FLECHA SUBIR PÁGINA */
+
+#to_up_btn {
+    position: fixed;
+    font-size: 10px;
+    z-index: 1000;
+    right: 25px;
+    bottom: 25px;
+    background-color: #281358;
+    color: #fff;
+    width: 45px;
+    height: 44px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+#to_up_btn:hover{
+    transform: scale(1.1);
+}
+
+.show-scroll-btn{
+    opacity: 1;
+    visibility: visible;
+}
+
+.hidden-scroll-btn{
+    opacity: 0;
+    visibility: hidden;
+}
 
 /* QUERIS */
 

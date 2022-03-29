@@ -36,7 +36,7 @@ const Galery = () => {
   
   
 </div>
-{/* <ReactPaginate
+<ReactPaginate
      previousLabel={"<"}
      nextLabel={">"}
      pageCount={pageCount}
@@ -46,7 +46,7 @@ const Galery = () => {
      nextLinkClassName={"nextBtn"}
      disabledClassName={"paginationDisabled"}
      activeClassName={"paginationActive"}
-     /> */}
+     />
     </div>
     
   )

@@ -20,8 +20,22 @@ import OtrosInfo from './components/navinfo/OtrosInfo';
 import { AuthProvider } from "./context/authContext";
 import Ingresar from './components/pages/Ingresar';
 import { ProtectedRoute } from './components/ProtecterRouter';
+import ToUpBtn from './components/ToUpBtn';
+import { useEffect, useState } from "react";
 
 function App() {
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 400) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    });
+  }, []);
+
   return (
     <>
       <Router>
@@ -51,6 +65,9 @@ function App() {
           <Route path='/login' element={<Ingresar/>}/>
           <Route path='/signup' element={<Contacto />}/>
         </Routes>
+        {showButton && (
+        <ToUpBtn />
+      )}     
         </AuthProvider>
         <Footer />
       </Router>

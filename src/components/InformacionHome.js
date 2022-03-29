@@ -15,7 +15,7 @@ const InformacionHome = () => {
             <p className='description-info'>¿Ya lo conoces? Te presento a <span className='mark-bold'><Link to="/">Guidano</Link></span>:</p>
             <img src="https://pymstatic.com/45655/conversions/vittorio-guidano-default.jpg" alt='Vittorio Guidano Perfil Retrato' />
             <p className='description-info'>
-                Hasta acá nuestro resumen del <span className='mark-bold'>Posracionalismo</span>, espero te haya resultado interesante. <i class="fa-solid fa-thumbs-up"></i>
+                Hasta acá nuestro resumen del <span className='mark-bold'>Posracionalismo</span>, espero te haya resultado interesante. <i className="fa-solid fa-thumbs-up"></i>
             </p>
         </div>
     )

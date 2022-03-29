@@ -3,7 +3,7 @@ import fondo from "../assets/videos/fondoposracionalismo.mp4"
 import { useAuth } from '../context/authContext';
 
 const Hero = () => {
-  const {user, logout, isAuth} = useAuth();
+  const {user, logout } = useAuth();
 
   const handleLogOut = async () => {
     try {
@@ -38,13 +38,13 @@ const Hero = () => {
           </div>
               
               <h1 className='text title'> <span className='txt-cursive'>el</span>Posracionalista</h1>
-              <p className='text webText'>Una web para 
+              <span className='text webText'>Una web para 
               <ul>
                   <li>aprender</li>
                   <li>descubrir</li>
                   <li>disfrutar</li>
               </ul>
-              </p>
+              </span>
         </div>
     </div>
   )
