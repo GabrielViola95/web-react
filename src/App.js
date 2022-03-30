@@ -22,6 +22,8 @@ import Ingresar from './components/pages/Ingresar';
 import { ProtectedRoute } from './components/ProtecterRouter';
 import ToUpBtn from './components/ToUpBtn';
 import { useEffect, useState } from "react";
+import AFQ from './components/AFQ';
+import MessageForo from './components/MessageForo';
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -61,7 +63,11 @@ function App() {
             <Route path='ejemplos' element={<EjemplosInfo/>}/>
             <Route path='otros' element={<OtrosInfo/>}/>
           </Route>
-          <Route path='/foro' element={<Foro/>}/>
+          <Route path='/foro' element={<Foro/>}>
+            <Route index element={<AFQ />} />
+            <Route path="afq" element={<AFQ />} />
+            <Route path='mensajes' element={<MessageForo />} />
+          </Route>
           <Route path='/login' element={<Ingresar/>}/>
           <Route path='/signup' element={<Contacto />}/>
         </Routes>
