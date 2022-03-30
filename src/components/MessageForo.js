@@ -9,16 +9,16 @@ const MessageForo = () => {
     <div className='box-container'>
         {!user 
         ? 
-        <div className='user-offline-warning'><p className='warning-text'>Tienes que iniciar sesión para poder participar y hacer tus propios comentarios</p></div>
+        <div className='user-offline-warning'><p className='warning-text'>Tienes que iniciar sesión para poder participar y hacer tus propias preguntas</p></div>
         :
         <div className="first-box-main">
             <div className="header-stripe">
-            <i class="fa-solid fa-envelope"></i>
+            <i className="fa-solid fa-circle-question"></i>
             </div>
             <div className="header-box">
                 <div className="title-and-message">
-                <p className='message-box mark-blue-bold'>Escriba un mensaje aquí</p>
-                <p className='message-small-box space-between'>Reservamos este espacio para que usted pueda compartir con nosotros un pensamiento, reflexión o cualquier tipo de mensaje.</p>
+                {/* <p className='message-box mark-blue-bold'>Escriba una pregunta aquí</p> */}
+                {/* <p className='message-small-box space-between'>Reservamos este espacio para que usted pueda realizar una pregunta o revelar una inquietud. Por cualquier otro interés podrá realizar el comentario en la sección de mensajes.</p> */}
                 </div>
             </div>
             <div className="description-box">
@@ -29,12 +29,12 @@ const MessageForo = () => {
             </div>
             <div className='send-message-bar'>
             
-                <div className="author-area">
+                {/* <div className="author-area">
                     <p className='message-box'>Autor:</p>
                 <p className='user-online-box'>
                     {user.email}
                 </p>
-                </div>
+                </div> */}
                <button className='btn-form'>Publicar</button>
                 </div>
         </div>}
