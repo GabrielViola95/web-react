@@ -34,7 +34,7 @@ const Investigacion = () => {
             
             {displayResearches}
 
-           {/* <ReactPaginate 
+           <ReactPaginate 
            previousLabel={"Anterior"}
            nextLabel={"Siguiente"}
            pageCount={pageCount}
@@ -44,7 +44,7 @@ const Investigacion = () => {
            nextLinkClassName={"nextBtn"}
            disabledClassName={"paginationDisabled"}
            activeClassName={"paginationActive"}
-           /> */}
+           />
 
         </div>
   )

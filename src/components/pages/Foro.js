@@ -1,9 +1,12 @@
+import BlogBox from '../BlogBox'
+import ColumnBlogs from '../ColumnBlogs'
 import './Foro.css'
 
 const Foro = () => {
   return (
     <div className='foro-container'>
-        <h2>Foro</h2>
+        <ColumnBlogs />
+        <BlogBox />
     </div>
   )
 }
