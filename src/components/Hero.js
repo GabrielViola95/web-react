@@ -18,7 +18,7 @@ const Hero = () => {
       <video loop autoPlay src={fondo} />
       <div className="acount-wrap">
       <div className="acount-data">
-      {!user ? (<><p className='offline'>No conectado</p></>) 
+      {!user ? (<><p className='offline'>Desconectado</p></>) 
       : (<>
         <p className='online'>
           {user.name || user.email}

@@ -21,7 +21,7 @@ const HeaderInfo = () => {
       
     <div className="sidebar">
         <header>
-            Información
+            Biblioteca
         </header>
         <ul>
             <li>

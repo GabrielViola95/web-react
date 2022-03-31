@@ -13,7 +13,7 @@ const MessageForo = () => {
         :
         <div className="first-box-main">
             <div className="header-stripe">
-            <i className="fa-solid fa-circle-question"></i>
+            <i className="fa-solid fa-envelope"></i>
             </div>
             <div className="header-box">
                 <div className="title-and-message">

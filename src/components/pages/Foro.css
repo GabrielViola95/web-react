@@ -226,7 +226,9 @@ box-shadow: 10px 10px 20px rgba(2, 0, 0, 0.664);
 }
 
 .autor-user{
+    margin-top: 5px;
     margin-left: 3rem;
+    color: rgb(75, 34, 114);
 }
 
 .arrow-box{
@@ -303,6 +305,22 @@ box-shadow: 10px 10px 20px rgba(2, 0, 0, 0.664);
 .autor-user-comments{
     margin-bottom: 1rem;
 }
+
+.trash-post{
+    width: 87%;
+    border: none;
+    outline: none;
+    background: none;
+    color: #fff;
+    font-size: 20px;
+    text-align: end;
+}
+
+.fa-trash-can{
+    cursor: pointer;
+}
+
+
 
 @media screen and (max-width: 760px) {
    
