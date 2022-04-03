@@ -1,8 +1,50 @@
+import { useForm } from "../hooks/useForm"
 import { Link } from "react-router-dom";
 import './Footer.css'
+import Loader from "./Loader";
+import Message from "./Message";
+
+const initialForm = {
+    email: "",
+    issue: "",
+    comments: "",
+  };
+  
+  const validationsForm = (form) => {
+    let errors = {};
+    let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+    let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
+    let regexComments = /^.{1,255}$/;
+  
+    if(!form.issue.trim()){
+      errors.issue = "El campo 'Asunto' es requerido";
+    } else if (!regexName.test(form.issue.trim())) {
+      errors.issue = "El campo 'Asunto' solo acepta letras y espacios en blanco";
+    }
+    if(!form.email.trim()){
+      errors.email = "El campo 'E-mail' es requerido";
+    } else if (!regexEmail.test(form.email.trim())) {
+      errors.email = "El campo 'E-mail' es incorrecto";
+    }
+    if(!form.comments.trim()){
+      errors.comments = "El campo 'Comentarios' es requerido";
+    } else if (!regexComments.test(form.comments.trim())) {
+      errors.comments = "El campo 'Comentarios' acepta hasta 255 caracteres";
+    }
+  
+    return errors;
+  };
+  
+  let styles ={
+    fontWeight: "bold",
+    color: "#dc3545",
+  };
 
 
 const Footer = () => {
+
+    const {form, errors, loading, response, handleChange, handleBlur, handleSubmit} = useForm(initialForm, validationsForm);
+
     return (
         <div className="footer-container">
             <section className="footer-subscription">
@@ -14,12 +56,19 @@ const Footer = () => {
               </p>
               <div className='input-areas'>
                   
-            <form className="form-main" >
-                <input type="email" name='email' className='footer-input' placeholder='Tu E-mail' />   
-                <input type="text" name='issue' className='footer-input' placeholder='Asunto' />        
-                <textarea className='footer-input textarea' name="comments"  cols="30" placeholder="Comentarios"></textarea>
+            <form className="form-main" onSubmit={handleSubmit}>
+            {errors.email && <p style={styles}>{errors.email}</p>}
+                <input type="email" name='email' className='footer-input' placeholder='Tu E-mail' onBlur={handleBlur} onChange={handleChange} value={form.email} required/>   
+                {errors.issue && <p style={styles}>{errors.issue}</p>}
+                <input onBlur={handleBlur} type="text" name='issue' className='footer-input' placeholder='Asunto' onBlur={handleBlur} 
+                    onChange={handleChange} value={form.issue} required/>        
+                {errors.comments && <p style={styles}>{errors.comments}</p>}
+                <textarea onBlur={handleBlur} className='footer-input textarea' name="comments"  cols="30" placeholder="Comentarios" onBlur={handleBlur} onChange={handleChange} value={form.comments} required></textarea>
+                
                 <div className="btn-wrap">
-                <button className="btn-form">Enviar consulta</button>
+                <button type="submit" className="btn-form">Enviar consulta</button>
+                {loading && <Loader/>}
+                {response && <Message msg="Los datos han sido enviados" bgColor="#198754" />}
                 </div>
             </form>
         </div>
