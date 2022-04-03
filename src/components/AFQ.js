@@ -3,6 +3,8 @@ import { collection, deleteDoc, getDocs, doc, addDoc } from 'firebase/firestore'
 import { auth, db } from '../firebase';
 import { useAuth } from '../context/authContext';
 import PostForo from './PostForo';
+import { ProtectedRoute } from './ProtecterRouter';
+import ReactPaginate from 'react-paginate';
 
 
 const AFQ = () => {
@@ -12,10 +14,15 @@ const AFQ = () => {
 
     const [postText, setPostText] = useState("");
 
+  let date = new Date;
+  let datePost = String(date.getDate()).padStart(2, '0') + '/' + String(date.getMonth() + 1).padStart(2, '0') + '/' + date.getFullYear();
+  let dateHour = (date.getHours()< 10 ? ('0' + date.getHours()) : date.getHours()) + ':' + (date.getMinutes()< 10 ? '0' + date.getMinutes() : date.getMinutes());
+
+  // ***createPOST***
+
     const createPost = async () => {
-        await addDoc(postsCollectionRef, { postText, author: { name: auth.currentUser.displayName, id: auth.currentUser.uid, email: auth.currentUser.email, image: auth.currentUser.photoURL }
+        await addDoc(postsCollectionRef, { postText, dateHour, datePost, author: { name: auth.currentUser.displayName, uid: auth.currentUser.uid, email: auth.currentUser.email, image: auth.currentUser.photoURL }
          });
-         
       };
     
       useEffect(() => {
@@ -23,6 +30,9 @@ const AFQ = () => {
          
         }
       }, [])
+
+
+      
 
     //   console.log(auth.currentUser)
     // postList
@@ -42,9 +52,23 @@ const AFQ = () => {
     };
 
     getPosts();
-  }, [deletePost]);  
+  }, [deletePost, createPost]);  
 
 
+  
+
+  // pagination
+
+  const [pageNumber, setPageNumber] = useState(0);
+
+   const postPerPage = 5;
+   const pagesVisited = pageNumber * postPerPage;
+
+   const pageCount = Math.ceil(postList.length / postPerPage);
+
+   const changePage = ({selected}) => {
+      setPageNumber(selected)
+   };
 
   return (
     <div className='box-container'>
@@ -70,12 +94,37 @@ const AFQ = () => {
                <button onClick={createPost} className='btn-form'>Publicar</button>
                 </div>
         </div>}
-        {postList.map((post) => {
+        <ProtectedRoute>
+
+        {postList.slice(pagesVisited, pagesVisited + postPerPage).map((post) => {
             return(
-                <PostForo key={post.id} question={post.postText} autorName={post.author.name}  autorEmail={post.author.email} deletePost={deletePost} id={post.id} postId={post.author.id} imageProfile={post.author.image} />
+                <PostForo 
+                key={post.id} 
+                Hour={post.dateHour} 
+                Datte={post.datePost}
+                question={post.postText} 
+                autorName={post.author.name}  
+                autorEmail={post.author.email} 
+                deletePost={deletePost} 
+                PostId={post.id} 
+                uid={post.author.uid} 
+                imageProfile={post.author.image} /> 
+                
             )
         })
         }
+        <ReactPaginate
+     previousLabel={"<"}
+     nextLabel={">"}
+     pageCount={pageCount}
+     onPageChange={changePage}
+     containerClassName={"paginationBtns"}
+     previousLinkClassName={"previousBtns"}
+     nextLinkClassName={"nextBtn"}
+     disabledClassName={"paginationDisabled"}
+     activeClassName={"paginationActive"}
+     />
+        </ProtectedRoute>
     </div>
   )
 }

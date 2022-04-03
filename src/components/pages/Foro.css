@@ -144,6 +144,11 @@ box-shadow: 10px 10px 20px rgba(2, 0, 0, 0.664);
     border-radius: 50%;
 }
 
+.comment-image-profil{
+    width: 50px !important;
+    /* corregir con clase después para no usar !important */
+}
+
 .comments-message-box{
     flex: 8;
     height: 50px;
@@ -307,7 +312,7 @@ box-shadow: 10px 10px 20px rgba(2, 0, 0, 0.664);
 }
 
 .trash-post{
-    width: 87%;
+    width: 63%;
     border: none;
     outline: none;
     background: none;
@@ -320,7 +325,10 @@ box-shadow: 10px 10px 20px rgba(2, 0, 0, 0.664);
     cursor: pointer;
 }
 
-
+.post-time-register{
+    margin-left: 1rem;
+    font-size: 15px;
+}
 
 @media screen and (max-width: 760px) {
    
@@ -386,6 +394,10 @@ box-shadow: 10px 10px 20px rgba(2, 0, 0, 0.664);
 
     .comments-bottom-box{
         width: 180px;
+    }
+
+    .trash-post{
+        width: 39%;
     }
 
     /* COMMENT */
