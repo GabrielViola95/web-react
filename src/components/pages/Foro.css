@@ -180,6 +180,10 @@ box-shadow: 10px 10px 20px rgba(2, 0, 0, 0.664);
     color: rgb(75, 34, 114);
 }
 
+.footer-comment{
+    display: flex;
+    justify-content: baseline;
+}
 
 /* mensaje de usuario offline */
 
@@ -233,6 +237,12 @@ box-shadow: 10px 10px 20px rgba(2, 0, 0, 0.664);
 .autor-user{
     margin-top: 5px;
     margin-left: 3rem;
+    color: rgb(75, 34, 114);
+}
+.autor-user-without-margin{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 25px;
     color: rgb(75, 34, 114);
 }
 
@@ -295,6 +305,13 @@ box-shadow: 10px 10px 20px rgba(2, 0, 0, 0.664);
     flex-direction: column;
     width: 100%;
 }
+
+.Loader-box-center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .main-comments-box{
     margin-top: .5rem;
     margin-bottom: .5rem;

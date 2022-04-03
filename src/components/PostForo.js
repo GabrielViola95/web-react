@@ -4,9 +4,11 @@ import {auth} from '../firebase';
 import {useAuth} from '../context/authContext';
 import { deleteDoc, onSnapshot, getDocs, doc, setDoc, addDoc, collection, query, where, collectionGroup } from "firebase/firestore";
 import { db } from "../firebase";
+import Loader from './Loader';
 
 
 const PostForo = ({ question, deletePost, id, autorEmail, autorName, imageProfile, PostId, Hour, Datte, uid }) => {
+    const [loading, setLoading] = useState(false);
     const {user} = useAuth()
     
     const [showComments, setShowComments] = useState(false);
@@ -27,20 +29,25 @@ const PostForo = ({ question, deletePost, id, autorEmail, autorName, imageProfil
     const messageDocumentRef = collection(db, `posts`, `${PostId}`, `messages`);
 
     const createMessage = async () => {
-        await addDoc(messageDocumentRef,{message, author: { name: auth.currentUser.displayName, id: auth.currentUser.uid, email: auth.currentUser.email, image: auth.currentUser.photoURL }}
+        await addDoc(messageDocumentRef,{message, author: { name: auth.currentUser.displayName, uid: auth.currentUser.uid, email: auth.currentUser.email, image: auth.currentUser.photoURL }}
          );
+         let textarea2 = document.getElementById('textarea-post2');
+         textarea2.value = "";
       };
 
       const deleteCmt = async (id) =>{
+        setLoading(true);
         // const messageDoc = doc(db, `posts/${id}/messages/${id}`, id);
         const commentDoc = doc(db, `posts/${PostId}/messages`, id);
         
         await deleteDoc(commentDoc);
+        setLoading(false);
         
         
       };
     
     useEffect(() => {
+        
         const getMessage = async () => {
             //   const data = await getDocs(doc(db, "posts", "messages", "message"));
             //   setMessageList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
@@ -65,6 +72,7 @@ const PostForo = ({ question, deletePost, id, autorEmail, autorName, imageProfil
              
             }
                 getMessage();
+        
       }, [deleteCmt, createMessage]);
     //   deleteMessage
 
@@ -103,10 +111,14 @@ const PostForo = ({ question, deletePost, id, autorEmail, autorName, imageProfil
                     <div className="user-pic">
                         <img className='comment-image-profil' src={auth.currentUser.photoURL || "https://www.nicepng.com/png/detail/202-2022264_usuario-annimo-usuario-annimo-user-icon-png-transparent.png"} alt="profile-image" />
                     </div>
-                    <textarea onChange={(e)=>{setMessage(e.target.value)}} className='comments-bottom-box' type="text" placeholder='Escribe un comentario' />
+                    <textarea id='textarea-post2' onChange={(e)=>{setMessage(e.target.value)}} className='comments-bottom-box' type="text" placeholder='Escribe un comentario' />
                     <button onClick={createMessage} className='btn-send-comments'><i className="fa-solid fa-paper-plane"></i></button>
                 </div>
                 <div className="all-comments-box">
+                
+                <div className="Loader-box-center">
+                {loading && <Loader/>}
+                </div>
 
                 { messageList.map((msg)=>{
                     
@@ -118,6 +130,7 @@ const PostForo = ({ question, deletePost, id, autorEmail, autorName, imageProfil
                         email={msg.author.email}
                         name={msg.author.name}
                         photo={msg.author.image}
+                        uid={msg.author.uid}
                         deleteCmt={deleteCmt}
                         />                        
                     )

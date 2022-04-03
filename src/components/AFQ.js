@@ -5,10 +5,12 @@ import { useAuth } from '../context/authContext';
 import PostForo from './PostForo';
 import { ProtectedRoute } from './ProtecterRouter';
 import ReactPaginate from 'react-paginate';
+import Loader from './Loader';
 
 
 const AFQ = () => {
     const { user, isAuth } = useAuth();
+    const [loading, setLoading] = useState(false);
 
     // createPost
 
@@ -20,9 +22,15 @@ const AFQ = () => {
 
   // ***createPOST***
 
+  const handleChange = (e) => {
+    setPostText(e.target.value)
+  }
+
     const createPost = async () => {
         await addDoc(postsCollectionRef, { postText, dateHour, datePost, author: { name: auth.currentUser.displayName, uid: auth.currentUser.uid, email: auth.currentUser.email, image: auth.currentUser.photoURL }
          });
+         let textarea = document.getElementById('textarea-post');
+         textarea.value = "";
       };
     
       useEffect(() => {
@@ -41,20 +49,24 @@ const AFQ = () => {
   const postsCollectionRef = collection(db, "posts");
 
   const deletePost = async (id) =>{
+    setLoading(true);
     const postDoc = doc(db, "posts", id);
     await deleteDoc(postDoc);
+    setLoading(false);
+    
   };
 
   useEffect(() => {
+    
     const getPosts = async () => {
       const data = await getDocs(postsCollectionRef);
       setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
 
-    getPosts();
+    getPosts(); 
   }, [deletePost, createPost]);  
 
-
+  
   
 
   // pagination
@@ -88,14 +100,14 @@ const AFQ = () => {
                 <div className="user-pic">
                     <img src={auth.currentUser.photoURL || "https://www.nicepng.com/png/detail/202-2022264_usuario-annimo-usuario-annimo-user-icon-png-transparent.png"} alt="profile-image" />
                 </div>
-                <textarea onChange={(e)=>{setPostText(e.target.value)}} className='comments-message-box' type="text" placeholder='Escribe tu pregunta aquí' />
+                <textarea id='textarea-post' onChange={handleChange} className='comments-message-box' type="text" placeholder='Escribe tu pregunta aquí' />
             </div>
             <div className='send-message-bar'>
                <button onClick={createPost} className='btn-form'>Publicar</button>
                 </div>
         </div>}
         <ProtectedRoute>
-
+          {loading && <Loader/>}
         {postList.slice(pagesVisited, pagesVisited + postPerPage).map((post) => {
             return(
                 <PostForo 
