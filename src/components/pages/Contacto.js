@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../../context/authContext';
+import { useAuth, AuthProvider } from '../../context/authContext';
 import { Alert } from '../Alert';
 import './Contacto.css'
 
@@ -12,14 +12,21 @@ const initialState = {
 
 
 const Contacto = () => {
-  const [user, setUser] = useState(initialState);
+  const [user, setuser] = useState(initialState);
   const navigate = useNavigate();
   const [error, setError] = useState()
 
   const {signup} = useAuth();
 
+  // useEffect(() => {
+
+  //   if (user) {
+  //     return navigate("/")
+  //   }
+  // }, [])
+
   const handleChange = ({target: {name,value}}) => {
-    setUser({...user, [name]: value})
+    setuser({...user, [name]: value})
   }
 
   const handleSubmit = async (e) => {
@@ -32,6 +39,8 @@ const Contacto = () => {
       setError(error.message)
     }
   }
+
+
   return (
     <div className='login_page'>
             <p className='acces-p'>Registra una cuenta para continuar</p>

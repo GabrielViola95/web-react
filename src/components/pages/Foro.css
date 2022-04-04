@@ -348,7 +348,10 @@ box-shadow: 10px 10px 20px rgba(2, 0, 0, 0.664);
 }
 
 @media screen and (max-width: 760px) {
-   
+
+    .autor-user{
+        margin-top: 18%;
+}
 
     .foro-container {
         flex-direction: column;

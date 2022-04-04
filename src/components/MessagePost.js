@@ -95,7 +95,7 @@ const MessagePost = ({ question, deletePost, id, autorEmail, autorName, imagePro
                     <div className="user-pic">
                         <img className='comment-image-profil' src={auth.currentUser.photoURL ? auth.currentUser.photoURL : "https://www.nicepng.com/png/detail/202-2022264_usuario-annimo-usuario-annimo-user-icon-png-transparent.png"} alt="profile-image" />
                     </div>
-                    <textarea id='textarea-post2' onChange={(e)=>{setMessage(e.target.value)}} className='comments-bottom-box' type="text" placeholder='Escribe un comentario' value={message} />
+                    <textarea id='textarea-post2' maxLength="300" onChange={(e)=>{setMessage(e.target.value)}} className='comments-bottom-box' type="text" placeholder='Escribe un comentario' value={message} />
                     <button onClick={createMessage} className='btn-send-comments'><i className="fa-solid fa-paper-plane"></i></button>
                 </div>
                 <div className="all-comments-box">

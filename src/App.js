@@ -19,11 +19,12 @@ import EjemplosInfo from './components/navinfo/EjemplosInfo';
 import OtrosInfo from './components/navinfo/OtrosInfo';
 import { AuthProvider } from "./context/authContext";
 import Ingresar from './components/pages/Ingresar';
-import { ProtectedRoute } from './components/ProtecterRouter';
 import ToUpBtn from './components/ToUpBtn';
 import { useEffect, useState } from "react";
 import AFQ from './components/AFQ';
 import MessageForo from './components/MessageForo';
+import { ProtectedRoute } from './components/ProtecterRouter';
+import { ProtectedRouterrr } from './components/ProtectedRouter';
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -68,8 +69,8 @@ function App() {
             <Route path="afq" element={<AFQ />} />
             <Route path='mensajes' element={<MessageForo />} />
           </Route>
-          <Route path='/login' element={<Ingresar/>}/>
-          <Route path='/signup' element={<Contacto />}/>
+          <Route path='/login' element={<ProtectedRouterrr><Ingresar/></ProtectedRouterrr>}/>
+          <Route path='/signup' element={<ProtectedRouterrr><Contacto/></ProtectedRouterrr>}/>
         </Routes>
         {showButton && (
         <ToUpBtn />

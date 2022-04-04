@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/authContext';
 import { Alert } from '../Alert';
@@ -16,6 +16,13 @@ const Ingresar = () => {
   const [error, setError] = useState()
 
   const {login, loginWithGoogle, resetPassword} = useAuth();
+
+  // useEffect(() => {
+
+  //   if (user) {
+  //     return navigate("/")
+  //   }
+  // }, [])
 
   const handleChange = ({target: {name,value}}) => {
     setUser({...user, [name]: value})

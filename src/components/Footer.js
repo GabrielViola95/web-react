@@ -77,17 +77,17 @@ const Footer = () => {
               <div className="footer-link-wrapper">
                   <div className="footer-link-items">
                       <h2>Canal de Youtube</h2>
-                      <Link to='/sign-up' > Cómo funciona</Link>
-                      <Link to='/' > Post</Link>
-                      <Link to='/' > Comunidad</Link>
-                      <Link to='/' > Descripción</Link>
-                      <Link to='/' > Videos</Link>
+                      <Link to='/login' > Cómo funciona</Link>
+                      <Link to='/foro/afq' > Post</Link>
+                      <Link to='/foro/afq' > Comunidad</Link>
+                      <Link to='/info' > Descripción</Link>
+                      <Link to='/info/videos' > Videos</Link>
                   </div>
                   <div className="footer-link-items">
                       <h2>Sitio Web</h2>
                       <Link to='/home' > Inicio</Link>
                       <Link to='/info' > información</Link>
-                      <Link to='/foro' > foro</Link>
+                      <Link to='/foro/afq' > foro</Link>
                       <Link to='/contacto' > Contacto</Link>
                   </div>
               </div>

@@ -32,14 +32,7 @@ const MessageForo = () => {
          setPostText("")
       };
     
-      useEffect(() => {
-        if(!isAuth){
-         
-        }
-      }, [])
-
-
-      
+           
 
     //   console.log(auth.currentUser)
     // postList
@@ -99,7 +92,7 @@ const MessageForo = () => {
                 <div className="user-pic">
                     <img src={auth.currentUser.photoURL || "https://www.nicepng.com/png/detail/202-2022264_usuario-annimo-usuario-annimo-user-icon-png-transparent.png"} alt="profile-image" />
                 </div>
-                <textarea id='textarea-post' onChange={handleChange} className='comments-message-box' type="text" placeholder='Escribe tu comentario aquí' value={postText} />
+                <textarea id='textarea-post' onChange={handleChange} maxLength="95" className='comments-message-box' type="text" placeholder='Escribe tu comentario aquí' value={postText} />
             </div>
             <div className='send-message-bar'>
                <button onClick={createPost} className='btn-form'>Publicar</button>
