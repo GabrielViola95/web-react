@@ -36,7 +36,7 @@ const PostForo = ({ question, deletePost, id, autorEmail, autorName, imageProfil
 
       const deleteCmt = async (id) =>{
         setLoading(true);
-        // const messageDoc = doc(db, `posts/${id}/messages/${id}`, id);
+        
         const commentDoc = doc(db, `posts/${PostId}/messages`, id);
         
         await deleteDoc(commentDoc);
@@ -48,32 +48,16 @@ const PostForo = ({ question, deletePost, id, autorEmail, autorName, imageProfil
     useEffect(() => {
         
         const getMessage = async () => {
-            //   const data = await getDocs(doc(db, "posts", "messages", "message"));
-            //   setMessageList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-            // };
-
-            // getMessage();
-
-            // const messages = query(collectionGroup(db, 'messages'));
-            //     const querySnapshot = await getDocs(messages);
-            //     querySnapshot.forEach((msg) => {
-            //     // console.log(msg.data());
-            //     let msgRef = msg.data()
-            //     setMessageList([msg.data()])
-            //     });
-
-            // let collectionRef = collection(db, "posts", `${PostId}`, "messages");
+            
             const data = await getDocs(messageDocumentRef);
 
-            // console.log("Id: ", doc.id, "Data: ", doc.data());
             setMessageList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-                    // setMessageList(msg.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-             
+                                 
             }
                 getMessage();
         
       }, [deleteCmt, createMessage]);
-    //   deleteMessage
+    
 
 
     return (

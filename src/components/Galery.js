@@ -1,12 +1,28 @@
 import Card from "./Card";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { collection, getDocs } from 'firebase/firestore';
 import JsonCards from '../data/card-hero.json';
 import ReactPaginate from "react-paginate";
+import { db } from "../firebase";
 
 
 
 const Galery = () => {
-  const [cards, setCards] = useState(JsonCards.slice(0, 9));
+
+  const postsCollectionRef = collection(db, "galery");
+  
+  const [cards, setCards] = useState([].slice(0, 9));
+  
+  useEffect(() => {
+    
+    const getGalery = async () => {
+      const data = await getDocs(postsCollectionRef);
+      setCards(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+
+    getGalery(); 
+  }, []);  
+
    const [pageNumber, setPageNumber] = useState(0);
 
    const cardsPerPage = 3;
