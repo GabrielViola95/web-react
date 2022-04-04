@@ -1,1 +1,18 @@
+.notFound{
+    height: 80vh;
+    width: 100%;
+    background-image: url("./assets/notFound.png");
+    object-fit: cover;
+    background-position: left;
+    
+}
 
+@media screen and (max-width: 820px){ 
+
+    .notFound{
+        height: 100vh;
+        background-image: url("./assets/notfound-celular.png");
+        background-position: center;
+    }
+    
+}

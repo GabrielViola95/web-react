@@ -25,6 +25,7 @@ import AFQ from './components/AFQ';
 import MessageForo from './components/MessageForo';
 import { ProtectedRoute } from './components/ProtecterRouter';
 import { ProtectedRouterrr } from './components/ProtectedRouter';
+import NotFound from './components/pages/NotFound';
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -46,8 +47,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={
-          <ProtectedRoute><Home /></ProtectedRoute> 
-          } />
+          <ProtectedRoute><Home /></ProtectedRoute>} />
           <Route path='/info' element={<Info/>}>
             <Route index element={<InformacionHome/>} />
             <Route path='posracionalismo' element={<InformacionHome/>} />
@@ -71,6 +71,7 @@ function App() {
           </Route>
           <Route path='/login' element={<ProtectedRouterrr><Ingresar/></ProtectedRouterrr>}/>
           <Route path='/signup' element={<ProtectedRouterrr><Contacto/></ProtectedRouterrr>}/>
+          <Route path="*" element={<NotFound/>} />
         </Routes>
         {showButton && (
         <ToUpBtn />
