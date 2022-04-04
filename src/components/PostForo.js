@@ -46,17 +46,21 @@ const PostForo = ({ question, deletePost, id, autorEmail, autorName, imageProfil
       };
     
     useEffect(() => {
-        
+
         const getMessage = async () => {
-            
+
             const data = await getDocs(messageDocumentRef);
 
             setMessageList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-                                 
-            }
-                getMessage();
+
+        }
+
         
-      }, [deleteCmt, createMessage]);
+            getMessage()
+            .catch(console.error);;
+        
+
+    }, [deleteCmt, createMessage]);
     
       const handleChange = (e) => {
         // (e)=>{setMessage(e.target.value)}
@@ -99,7 +103,7 @@ const PostForo = ({ question, deletePost, id, autorEmail, autorName, imageProfil
                 
                 <div className="comments-box">
                     <div className="user-pic">
-                        <img className='comment-image-profil' src={auth.currentUser.photoURL ? auth.currentUser.photoURL : "https://www.nicepng.com/png/detail/202-2022264_usuario-annimo-usuario-annimo-user-icon-png-transparent.png"} alt="profile-image" />
+                        <img className='comment-image-profil' src={user && auth.currentUser.photoURL ? auth.currentUser.photoURL : "https://www.nicepng.com/png/detail/202-2022264_usuario-annimo-usuario-annimo-user-icon-png-transparent.png"} alt="profile-image" />
                     </div>
                     <textarea id='textarea-post2' onChange={handleChange} maxLength="300" className='comments-bottom-box' type="text" placeholder='Escribe un comentario' value={message} />
                     <button onClick={createMessage} className='btn-send-comments'><i className="fa-solid fa-paper-plane"></i></button>

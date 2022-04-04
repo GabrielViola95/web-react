@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png'
 import './Navbar.css';
@@ -9,7 +9,21 @@ const Navbar = () => {
 
     const [showNavbar, setShowNavbar] = useState(false);
 
-
+    const [scrollShowNavbar, setScrollShowNavbar] = useState(true);
+    const controlNavbar = () => {
+        if(window.scrollY > 100) {
+            setScrollShowNavbar(false)
+        }
+        else {
+            setScrollShowNavbar(true)
+        }
+    }
+    useEffect(() => {
+        window.addEventListener('scroll', controlNavbar)
+        return () => {
+            window.removeEventListener('scroll', controlNavbar)
+        };
+    }, []);
     
 
     const handleNavbar = () => {
@@ -22,7 +36,7 @@ const Navbar = () => {
 
 
     return (
-        <nav className='navbar_main'>
+        <nav className={scrollShowNavbar === true ? 'navbar_main' : 'navbar_main scroll-top'}>
             <div className="navbar-container">
 
                 <Link to="/" className='navbar-logo'>

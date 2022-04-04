@@ -54,7 +54,7 @@ const Contacto = () => {
         </div>
         <div className="input-wrap">
         <p htmlFor='password' className='label-form'>Contraseña</p>
-        <input onChange={handleChange} type="password" placeholder='******' name='password' className='input-form'/>
+        <input onChange={handleChange} autoComplete="on" type="password" placeholder='******' name='password' className='input-form'/>
         </div>      
         <div className="btn-wrapper">
         <button className="btn-form">Registrarse</button>

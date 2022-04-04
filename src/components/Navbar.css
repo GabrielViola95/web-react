@@ -11,6 +11,7 @@
   position: sticky;
   top: 0;
   z-index: 999;
+  transition: all 1s;
 }
 
 .navbar-container {
@@ -92,6 +93,10 @@
     position: relative;
   }
 
+  .scroll-top{
+    top: -80px;
+  }
+
   .nav-menu {
     display: flex;
     flex-direction: column;
@@ -111,6 +116,7 @@
     transition: all 0.5s ease;
     z-index: 1;
     justify-content: start;
+    height: 100vh;
   }
 
   .nav-links {
