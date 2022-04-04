@@ -5,7 +5,7 @@ const ConstructivismoConceptos = () => {
   return (
     <div className="Info-table">
             <h2 className='title-info'>¿Constructivismo?</h2>
-            <p className='description-info'>El <span className='mark-bold'>Constructivismo</span> es una corriente pedagógica basada en la teoría del conocimiento constructivista, que postula la necesidad de entregar al estudiante las herramientas necesarias (generar andamiajes) que le permitan construir sus propios procedimientos para resolver una situación problemática, lo que implica que sus ideas puedan verse modificadas y siga aprendiendo.  
+            <p className='description-info'>El <span className='mark-bold'>Constructivismo</span> es una corriente pedagógica basada en la teoría del conocimiento constructivista, que postula la necesidad de entregar al estudiante las herramientas necesarias (generar andamiajes) que le permitan construir sus propios procedimientos para resolver una situación problemática, lo que implica que sus ideas puedan verse modificadas y siga aprendiendo. A su vez, 
             </p>
             <p className='description-info'> 
             El constructivismo propone un paradigma donde <span className='mark-bold'>el proceso de enseñanza se percibe y se lleva a cabo como un proceso dinámico, participativo e interactivo del sujeto</span>, de modo que <span className='mark-bold'>el conocimiento sea una auténtica construcción</span> operada por la persona que aprende (por el «sujeto cognoscente»). El constructivismo en pedagogía se aplica como concepto didáctico en la enseñanza orientada a la acción.

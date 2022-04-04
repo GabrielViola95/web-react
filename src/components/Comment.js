@@ -12,7 +12,7 @@ const Comment = ({
 
             <div className="main-comments-box" >
                 <div className="user-pic">
-                    <img src={photo || "https://www.nicepng.com/png/detail/202-2022264_usuario-annimo-usuario-annimo-user-icon-png-transparent.png"} alt="profile-image" />
+                    <img src={name ? photo : "https://www.nicepng.com/png/detail/202-2022264_usuario-annimo-usuario-annimo-user-icon-png-transparent.png"} alt="profile-image" />
                 </div>
                 <div className='comments-bottom-post'>
                     <p>{cmt}</p>
