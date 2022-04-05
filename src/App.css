@@ -129,6 +129,6 @@
 
 @media screen and (max-height: 400px){
     .notFound{
-        height: 250vh;
+       height: 250vh;
     } 
 }
