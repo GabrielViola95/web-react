@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Comment from './Comment';
 import {auth} from '../firebase';
 import {useAuth} from '../context/authContext';
-import { deleteDoc, onSnapshot, getDocs, doc, setDoc, addDoc, collection, query, where, collectionGroup } from "firebase/firestore";
+import { deleteDoc, getDocs, doc, addDoc, collection} from "firebase/firestore";
 import { db } from "../firebase";
 import Loader from './Loader';
 
@@ -62,6 +62,45 @@ const MessagePost = ({ question, deletePost, id, autorEmail, autorName, imagePro
     }, [deleteCmt, createMessage]);
     
 
+
+
+    //   ***LIKES***
+
+    const [like, setLike] = useState(false)
+    const [likesCount, setlikesCount] = useState("");
+
+    const likesDocumentRef = collection(db, `posts`, `${PostId}`, `likes`);
+
+ 
+    const handleLikes = async () => {
+        setLike(!like)
+        if(like){
+            const data = await getDocs(likesDocumentRef);
+            const counting = data.docs.map((doc) => doc.id);
+                const likesDoc = doc(db, `posts/${PostId}/likes`, counting[0]);
+                await deleteDoc(likesDoc);
+        }
+        if(!like){
+            await addDoc(likesDocumentRef, { author: { name: auth.currentUser.displayName, uid: auth.currentUser.uid, email: auth.currentUser.email } });
+        }
+    }
+
+    useEffect(() => {
+        
+        const getLikes = async () => {
+
+            const data = await getDocs(likesDocumentRef);
+
+            const counting = data.docs.map((doc) => ({ ...doc.data() }));
+            setlikesCount(counting.length.toString())
+        }
+            getLikes()
+            .catch(console.error);;
+    }, [handleLikes]);
+
+
+
+
   return (
     <div className="post-box" >
             <div className="header-stripe">
@@ -77,7 +116,6 @@ const MessagePost = ({ question, deletePost, id, autorEmail, autorName, imagePro
             </div>
             <div className="description-box">
                 <div className="user-pic">
-                {/* {imageProfile || "https://www.nicepng.com/png/detail/202-2022264_usuario-annimo-usuario-annimo-user-icon-png-transparent.png"} */}
                     <img src={autorName ? imageProfile : "https://www.nicepng.com/png/detail/202-2022264_usuario-annimo-usuario-annimo-user-icon-png-transparent.png"}
                      alt="profile-image" />
                 </div>
@@ -86,7 +124,16 @@ const MessagePost = ({ question, deletePost, id, autorEmail, autorName, imagePro
                 </div>
                 
             </div>
-            <p className='autor-user'>{autorName ? ("@"+ autorName) : autorEmail}</p>
+            <div className="autor-likes-bar">
+               <div className="autor-wrap">
+               <p className='autor-user'>{autorName ? ("@"+ autorName) : autorEmail}</p>
+               </div>
+           <div onClick={() => handleLikes(uid)} className={!like ? "like-out" : "liked"}>
+               <span className={!like ? "heart" : "heart-liked"}><i className="fa-solid fa-heart"></i></span>
+               <span className='like-name'>Me gusta</span>
+               <span className='numb'>{likesCount}</span>
+           </div>
+           </div>
             <div className="arrow-box">
                 
            {!showComments ? <i onClick={handleShowComments} className="fa-solid fa-angles-down"></i> : <i onClick={handleShowComments} className="fa-solid fa-angles-up"></i>}

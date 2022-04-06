@@ -104,23 +104,6 @@ const PostForo = ({ question, deletePost, id, autorEmail, autorName, imageProfil
             .catch(console.error);;
     }, [handleLikes]);
 
-
-    // useEffect(() => {
-    //     const deleteAll = async() =>{
-    //         const data = await getDocs(likesDocumentRef);
-    //     const mgRepeated = data.map((doc) => { 
-    //         return doc.id, doc.author.uid
-    //     }).filter((doc) => {
-    //         return doc.uid === auth.currentUser.uid
-    //     })
-    //     const likesDoc = doc(db, `posts/${PostId}/likes`, mgRepeated.id);
-    //     await deleteDoc(likesDoc);
-    //     }
-
-    //     deleteAll()
-
-    // }, [handleLikes]);
-
     return (
         <div className="post-box" >
             <div className="header-stripe">
