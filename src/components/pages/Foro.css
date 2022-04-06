@@ -234,9 +234,56 @@ box-shadow: 10px 10px 20px rgba(2, 0, 0, 0.664);
     display: none;
 }
 
+.autor-wrap{
+    display: flex;
+    align-items: center;
+}
+
+.autor-likes-bar{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.like-out{
+    display: flex;
+    gap: 4px;
+    opacity: .5;
+    transition: all 200ms;
+}
+
+.like-out:hover{
+    cursor: pointer;
+    opacity: .7;
+}
+
+.liked{
+    cursor: pointer;
+    opacity: .8;
+    display: flex;
+    gap: 4px;
+    transition: all 200ms;
+}
+
+.heart{
+    animation: all 200ms;
+}
+
+.heart:hover{
+    color: #dc3545;
+}
+
+.heart-liked{
+    color: #dc3545;;
+}
+
+.numb{
+    font-weight: bold;
+}
+
+
 .autor-user{
-    margin-top: 5px;
-    margin-left: 3rem;
     color: rgb(75, 34, 114);
 }
 .autor-user-without-margin{
@@ -326,6 +373,7 @@ box-shadow: 10px 10px 20px rgba(2, 0, 0, 0.664);
 
 .autor-user-comments{
     margin-bottom: 1rem;
+    margin-left: 2rem;
 }
 
 .trash-post{
@@ -349,9 +397,10 @@ box-shadow: 10px 10px 20px rgba(2, 0, 0, 0.664);
 
 @media screen and (max-width: 760px) {
 
-    .autor-user{
-        margin-top: 18%;
-}
+    .autor-likes-bar{
+        margin: 1rem 0;
+        padding: .5rem 0;
+    }
 
     .foro-container {
         flex-direction: column;
